@@ -15,7 +15,7 @@
     <p>
       <span>后端:</span>
       <van-button 
-      type="default" 
+      type="default"
       v-for="(item,index) in serverList" 
       :key="index"
       @click="linkto(item.href)"
@@ -61,19 +61,14 @@ export default {
   methods: {
     ...mapActions(["getSubjects"]),
     linkto(href) {
-      this.$toast.loading({
-        mask: true,
-        message: "加载中..."
-      });
+      // this.$toast.loading("加载中...");
       window.location.href = href;
     }
   },
   computed: {
     ...mapState(["subjectList"])
   },
-  created() {
-    // this.getSubjects();
-  }
+  created() {}
 };
 </script>
 
