@@ -8,7 +8,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   runtimeCompiler: true, //是否使用包含运行时编译器的 Vue 构建版本
-  baseUrl: "",
+  baseUrl: process.env.NODE_ENV === "production" ? "/blog/" : "/",
   productionSourceMap: false, //不在production环境使用SourceMap
   css: {
     loaderOptions: {
@@ -75,7 +75,7 @@ module.exports = {
   },
   devServer: {
     //跨域
-    port: 80, // 端口号
+    port: 8080, // 端口号
     open: true, //配置自动启动浏览器
     proxy: {
       // 配置跨域处理 可以设置多个
