@@ -68,7 +68,7 @@ module.exports = {
         return options;
       });
     config.externals({
-      vue: "Vue",
+      vue: "vue",
       "vue-router": "VueRouter",
       vuex: "Vuex"
     });
