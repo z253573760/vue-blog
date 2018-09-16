@@ -67,11 +67,11 @@ module.exports = {
         options.compilerOptions.preserveWhitespace = true;
         return options;
       });
-    config.externals({
-      vue: "vue",
-      "vue-router": "VueRouter",
-      vuex: "Vuex"
-    });
+    // config.externals({
+    //   //   vue: "vue",
+    //   //   "vue-router": "VueRouter",
+    //   vuex: "Vuex"
+    // });
   },
   devServer: {
     //跨域
