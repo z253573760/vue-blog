@@ -61,7 +61,7 @@ export default {
   methods: {
     ...mapActions(["getSubjects"]),
     linkto(href) {
-      // this.$toast.loading("加载中...");
+      this.$toast.loading("加载中...");
       window.location.href = href;
     }
   },
