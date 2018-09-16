@@ -44,4 +44,7 @@ export default {
   font-size: 0.3rem;
   /* letter-spacing: 0.05rem; */
 }
+.lizi {
+  height: 60%;
+}
 </style>
