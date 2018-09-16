@@ -21,6 +21,7 @@
     "@vue/cli-service": "^3.0.3",
     "@vue/eslint-config-prettier": "^3.0.3",
     "babel-plugin-import": "^1.8.0",
+    "babel-polyfill": "^6.26.0",
     "vue-template-compiler": "^2.5.17"
   }
 }
