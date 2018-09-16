@@ -3,11 +3,6 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <metaname="x5-orientation" c/code>
-    <!-- QQ浏览器强制竖屏 -->
-    <meta name="x5-orientation" content="portrait">
-    <!-- uc浏览器强制竖屏 -->
-    <meta name="screen-orientation" content="portrait">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
@@ -25,17 +20,4 @@
 <style>
  html,body{width:100%;height:100%};
 </style>
-<script>
-!function(n, e) {
-    var t = n.documentElement,
-    i = "orientationchange" in window ? "orientationchange": "resize",
-    d = function() {
-        var n = t.clientWidth;
-        //n && (t.style.fontSize = (n > 750 ? 750 : n) / 750 * 100 + "px")
-        n && (t.style.fontSize = n / 750 * 100 + "px");
-    };
-    n.addEventListener && (e.addEventListener(i, d, !1), d(), n.addEventListener("DOMContentLoaded", d, !1))
-} (document, window);
-
-
-</script>
+<script src="./rem.js"></script>
