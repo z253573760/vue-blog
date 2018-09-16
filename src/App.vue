@@ -5,7 +5,11 @@
         <van-icon name="wap-nav" />
       </van-button>
     </div>
-    <van-popup v-model="menuShow" position="top">
+    <van-popup
+     v-model="menuShow"
+     position="top"
+     click-overlay = 'test'
+     >
       <Menu/>
     </van-popup>
     <transition name="slide-fade">
@@ -26,7 +30,10 @@ export default {
     };
   },
   methods: {
-    ...mapMutations(["CHANGE_MENU"])
+    ...mapMutations(["CHANGE_MENU"]),
+    test() {
+      console.log("test");
+    }
   },
   computed: {
     menuShow: {
