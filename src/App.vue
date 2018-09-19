@@ -2,13 +2,12 @@
   <div id="app">
     <div class="nav-warpper">
       <van-button type="default" plain @click='CHANGE_MENU'>
-        <van-icon name="wap-nav" />
+        <van-icon name="wap-nav"/>
       </van-button>
     </div>
     <van-popup
-     v-model="menuShow"
+     v-model="isShow"
      position="top"
-     click-overlay = 'test'
      >
       <Menu/>
     </van-popup>
@@ -19,29 +18,28 @@
 </template>
 <script>
 import Menu from "@/views/Menu";
-import { mapMutations } from "vuex";
+import { mapMutations, mapState } from "vuex";
 export default {
   components: {
     Menu
   },
   data() {
     return {
-      //isShow: this.$store.state["menuShow"]
+      isShow: false
     };
   },
-  methods: {
-    ...mapMutations(["CHANGE_MENU"]),
-    test() {
-      console.log("test");
+  watch: {
+    menuShow: {
+      handler(cur) {
+        this.isShow = cur;
+      }
     }
   },
+  methods: {
+    ...mapMutations(["CHANGE_MENU"])
+  },
   computed: {
-    menuShow: {
-      get() {
-        return this.$store.state.menuShow;
-      },
-      set() {}
-    }
+    ...mapState(["menuShow"])
   }
 };
 </script>

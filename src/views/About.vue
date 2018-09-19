@@ -23,7 +23,6 @@
       {{item.text}}
       </van-button>
     </p>
-
   </div>
 </template>
 <script>
