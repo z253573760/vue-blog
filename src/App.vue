@@ -8,6 +8,7 @@
     <van-popup
      v-model="isShow"
      position="top"
+     @click-overlay ="CHANGE_MENU"
      >
       <Menu/>
     </van-popup>
