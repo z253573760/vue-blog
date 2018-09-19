@@ -31,6 +31,7 @@ export default {
   watch: {
     menuShow: {
       handler(cur) {
+        console.log(cur);
         this.isShow = cur;
       }
     }
