@@ -15,6 +15,7 @@
       :key="index"
       @click="linkto(item.href)"
       v-color="'red'"
+      class="item"
       >
       {{item.text}}
       </van-button>
@@ -26,6 +27,7 @@
       v-for="(item,index) in serverList" 
       :key="index"
       @click="linkto(item.href)"
+      class="item"
       >
       {{item.text}}
       </van-button>
@@ -80,27 +82,22 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "@/assets/css/mixin.scss";
+
 .about {
-  padding: 1rem;
+  padding: px2rem(20px);
   height: 100%;
   background: #eeeeee;
   color: black;
-  /* text-align: center; */
-}
-.about p {
-  height: 1rem;
-  line-height: 1rem;
-}
-.about img {
-  width: 0.4rem;
-}
-.about .item {
-  text-align: center;
-  width: 0.3rem;
-  padding: 0.3rem;
-  height: 0.8rem;
-  line-height: 2rem;
-  font-size: 0.3rem;
+  p {
+    height: px2rem(50px);
+    line-height: px2rem(50px);
+  }
+  .item {
+    text-align: center;
+    width: px2rem(63px);
+    padding: px2rem(1px);
+  }
 }
 </style>

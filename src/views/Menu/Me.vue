@@ -1,7 +1,7 @@
 <template>
 	<div class="me">
      <transition enter-active-class="bounceIn animated">
-			<img v-if="menuShow" class="headimgurl" src="@/assets/touxiang.jpg" alt="这是头像">
+			<img v-if="menuShow" class="headimgurl" src="@/assets/image/touxiang.jpg" alt="这是头像">
     </transition>
 	</div>
 </template>
@@ -16,17 +16,17 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .me {
   width: 100%;
   height: 150px;
   text-align: center;
-}
-.headimgurl {
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
-  border-radius: 50%;
-  border: 2px solid black;
+  .headimgurl {
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid black;
+  }
 }
 </style>

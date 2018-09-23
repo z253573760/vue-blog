@@ -61,7 +61,7 @@ export default {
 };
 </script>
 
-<style scope>
+<style lang="scss" scope>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -70,12 +70,12 @@ export default {
   color: white;
   background-color: black;
   height: 100%;
-}
-.nav-warpper {
-  position: fixed;
-  top: 2%;
-  left: 85%;
-  z-index: 99999;
+  .nav-warpper {
+    position: fixed;
+    top: 2%;
+    left: 85%;
+    z-index: 99999;
+  }
 }
 
 /* 可以设置不同的进入和离开动画 */

@@ -33,19 +33,14 @@ export default {
   created() {}
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
+@import "@/assets/css/mixin.scss";
 .home {
-  height: 100%;
-  background-image: url("../../assets/first_screen.jpg");
-  background-size: 100% 100%;
-  text-align: center;
-  line-height: 100%;
-}
-.home .text {
-  /* height: 100%;
-  line-height: 100%; */
-  font-size: 0.3rem;
-  /* letter-spacing: 0.05rem; */
+  @extend .bg;
+  background-image: url("../../assets/image/bghome.jpg");
+  .text {
+    font-size: $fontSize;
+  }
 }
 .lizi {
   height: 60%;

@@ -15,7 +15,7 @@ export default {
 .notFound {
   height: 100%;
   line-height: 100%;
-  background: url("../assets/404.jpg");
+  background: url("../assets/image/404.jpg");
   background-size: 100%;
 }
 </style>
