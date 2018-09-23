@@ -41,8 +41,8 @@ export default {
   .text {
     font-size: $fontSize;
   }
-}
-.lizi {
-  height: 60%;
+  .lizi {
+    height: 70%;
+  }
 }
 </style>

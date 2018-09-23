@@ -41,9 +41,8 @@ export default {
 .nav {
   display: flex;
   flex-direction: column;
-  height: px2rem(180px);
+  height: px2rem(320px);
   justify-content: space-around;
-  font-size: 0.3rem;
   font-weight: bold;
   user-select: none;
   .btn {

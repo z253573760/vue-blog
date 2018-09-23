@@ -17,16 +17,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "@/assets/css/mixin.scss";
 .me {
   width: 100%;
-  height: 150px;
+  height: px2rem(220px);
   text-align: center;
   .headimgurl {
-    width: 150px;
-    height: 150px;
+    width: px2rem(220px);
+    height: px2rem(220px);
     overflow: hidden;
     border-radius: 50%;
-    border: 2px solid black;
+    border: px2rem(1px) solid black;
   }
 }
 </style>

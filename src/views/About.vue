@@ -15,7 +15,7 @@
       :key="index"
       @click="linkto(item.href)"
       v-color="'red'"
-      class="item"
+      class="btn"
       >
       {{item.text}}
       </van-button>
@@ -27,7 +27,7 @@
       v-for="(item,index) in serverList" 
       :key="index"
       @click="linkto(item.href)"
-      class="item"
+      class="btn"
       >
       {{item.text}}
       </van-button>
@@ -77,7 +77,7 @@ export default {
     ...mapState(["subjectList"])
   },
   created() {
-    console.log(this.$listeners);
+    // console.log(this.$listeners);
   }
 };
 </script>
@@ -86,17 +86,17 @@ export default {
 @import "@/assets/css/mixin.scss";
 
 .about {
-  padding: px2rem(20px);
+  padding: px2rem(80px);
   height: 100%;
   background: #eeeeee;
   color: black;
   p {
-    height: px2rem(50px);
-    line-height: px2rem(50px);
+    height: px2rem(100px);
+    line-height: px2rem(100px);
   }
-  .item {
+  .btn {
     text-align: center;
-    width: px2rem(63px);
+    width: px2rem(127px);
     padding: px2rem(1px);
   }
 }
