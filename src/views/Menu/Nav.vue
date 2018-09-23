@@ -2,10 +2,11 @@
 	<div class="nav" >
     <van-button 
       type="default"
-      @click ='linkto(item.path)' 
-      class="btn" 
+      @click ='linkto(item.path,key)' 
+      class="btn animated" 
       v-for="(item,key) in navs" 
       :key="key"
+      ref="btn"
       >
       {{item.title}}
     </van-button>
@@ -21,7 +22,7 @@ export default {
       navs: [
         { title: "Home", path: "/" },
         { title: "About", path: "/about" },
-        { title: "Resume", path: "/" }
+        { title: "Resume", path: "/404" }
       ]
     };
   },
@@ -46,6 +47,7 @@ export default {
   font-weight: bold;
   user-select: none;
   .btn {
+    cursor: point;
     font-size: px2rem(10px);
     &:active {
       transform: scale(1.3);

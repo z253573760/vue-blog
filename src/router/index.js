@@ -13,6 +13,10 @@ export default new Router({
       component: () => import("@/views/Home")
     },
     {
+      path: "*",
+      redirect: "/"
+    },
+    {
       path: "/about",
       name: "about",
       component: () => import("@/views/About")
