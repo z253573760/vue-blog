@@ -1,6 +1,6 @@
 <template>
 	<div class="me">
-     <transition enter-active-class="bounceIn animated">
+     <transition enter-active-class="rubberBand animated">
 			<img v-if="menuShow" class="headimgurl" src="@/assets/image/touxiang.jpg" alt="这是头像">
     </transition>
 	</div>
