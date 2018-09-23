@@ -41,13 +41,13 @@ export default {
 .nav {
   display: flex;
   flex-direction: column;
-  height: px2rem(320px);
+  height: px2rem(360px);
   justify-content: space-around;
   font-weight: bold;
   user-select: none;
   .btn {
     cursor: point;
-    font-size: px2rem(10px);
+    font-size: px2rem(22px);
     &:active {
       transform: scale(1.3);
       font-weight: bold;
