@@ -5,9 +5,11 @@
   "scripts": {
     "serve": "vue-cli-service serve ",
     "build": "vue-cli-service build",
+    "build_test":"vue-cli-service build --mode=test",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "animate.css": "^3.7.0",
     "axios": "^0.18.0",
     "mint-ui": "^2.2.13",
     "vant": "^1.3.2",

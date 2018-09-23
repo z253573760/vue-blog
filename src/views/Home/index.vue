@@ -26,8 +26,11 @@
 </template>
 
 <script>
+import getRouter from "@/mixin/getRouter";
 export default {
-  name: "Home"
+  name: "Home",
+  mixins: [getRouter],
+  created() {}
 };
 </script>
 <style scoped>

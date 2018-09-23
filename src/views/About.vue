@@ -1,6 +1,12 @@
 <template>
   <div class="about">
-    <p>一个91年的菜鸟码农</p>
+    <transition 
+    clsss="animated"
+    enter-active-class="bounceIn" 
+    leave-active-class="bounceOut"
+    >
+      <p>一个91年的菜鸟码农</p>
+    </transition>
     <p>
       <span>前端:</span>
       <van-button 
@@ -8,6 +14,7 @@
       v-for="(item,index) in webList" 
       :key="index"
       @click="linkto(item.href)"
+      v-color="'red'"
       >
       {{item.text}}
       </van-button>
@@ -60,13 +67,16 @@ export default {
   methods: {
     ...mapActions(["getSubjects"]),
     linkto(href) {
+      this.$emit("func", href);
       window.open(href);
     }
   },
   computed: {
     ...mapState(["subjectList"])
   },
-  created() {}
+  created() {
+    console.log(this.$listeners);
+  }
 };
 </script>
 

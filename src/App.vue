@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="nav-warpper">
-      <van-button type="default" plain @click='CHANGE_MENU'>
+      <van-button type="default" plain @click='CHANGE_MENU' :style="blk">
         <van-icon name="wap-nav"/>
       </van-button>
     </div>
@@ -13,7 +13,11 @@
       <Menu/>
     </van-popup>
     <transition name="slide-fade">
-      <router-view/>
+      <router-view 
+      @func ="fatherFunc"
+      :key = "$route.fullpath"
+
+       />
     </transition>
   </div>
 </template>
@@ -26,27 +30,38 @@ export default {
   },
   data() {
     return {
-      isShow: false
+      isShow: false,
+      blk: {
+        // border: "0.1px solid",
+        background: "white",
+        color: "black"
+      }
     };
   },
   watch: {
     menuShow: {
-      handler(cur, old) {
-        console.log(cur, old);
+      handler(cur) {
+        this.blk.color = cur ? "white" : "black";
+        this.blk.background = cur ? "#969696" : "white";
         this.isShow = cur;
       }
     }
   },
   methods: {
+    fatherFunc(data) {
+      console.log("我是父组件的方法----", data);
+    },
     ...mapMutations(["CHANGE_MENU"])
   },
   computed: {
-    ...mapState(["menuShow"])
+    ...mapState({
+      menuShow: state => state.menuShow
+    })
   }
 };
 </script>
 
-<style>
+<style scope>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -62,6 +77,7 @@ export default {
   left: 85%;
   z-index: 99999;
 }
+
 /* 可以设置不同的进入和离开动画 */
 /* 设置持续时间和动画函数 */
 .slide-fade-enter-active {
@@ -70,7 +86,8 @@ export default {
 .slide-fade-leave-active {
   transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.slide-fade-enter, .slide-fade-leave-to
+.slide-fade-enter, 
+.slide-fade-leave-to
 /* .slide-fade-leave-active for below version 2.1.8 */ {
   transform: translateX(10px);
   opacity: 0;

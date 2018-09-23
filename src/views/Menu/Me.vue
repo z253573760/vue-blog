@@ -1,18 +1,27 @@
 <template>
 	<div class="me">
-		<div class="">
-			<img class="headimgurl" src="@/assets/touxiang.jpg" alt="">
-		</div>
+     <transition enter-active-class="bounceIn animated">
+			<img v-if="menuShow" class="headimgurl" src="@/assets/touxiang.jpg" alt="这是头像">
+    </transition>
 	</div>
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
-  name: "me"
+  name: "me",
+  computed: {
+    ...mapState(["menuShow"])
+  }
 };
 </script>
 
 <style scoped>
+.me {
+  width: 100%;
+  height: 150px;
+  text-align: center;
+}
 .headimgurl {
   width: 150px;
   height: 150px;

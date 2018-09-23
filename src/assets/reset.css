@@ -13,10 +13,12 @@
       margin: 0;
       padding: 0;
   }
-  body {
+  body,html{
       background: #fff;
       color: #555;
       font-size: 14px;
+      height:100%;
+      width:100%;
       font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
   }
   td, th, caption {
