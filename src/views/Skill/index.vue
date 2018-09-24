@@ -1,6 +1,8 @@
 <template>
   <div class="skill">
-    <div class="header"></div>
+    <div class="header">
+         <Particles />
+    </div>
     <p>
       <van-button 
       type="default" 
@@ -17,9 +19,14 @@
 </template>
 <script>
 import { mapActions, mapState } from "vuex";
+import Particles from "@/components/particles";
 export default {
+  components: {
+    Particles
+  },
   data() {
     return {
+      sty: { height: `${200 / 37.5}px` },
       show: false,
       webList: [
         { text: "javascript" },
@@ -65,7 +72,7 @@ export default {
     ...mapState(["subjectList"])
   },
   created() {
-    // console.log(this.$listeners);
+    console.log(this.sty);
   }
 };
 </script>

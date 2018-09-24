@@ -29,7 +29,6 @@ export default {
     this.list = this.list.sort(
       (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
     );
-    console.log(this.list);
   },
   methods: {
     onLoad() {},

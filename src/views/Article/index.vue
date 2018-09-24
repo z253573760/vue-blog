@@ -1,6 +1,8 @@
 <template>
   <div class="article" >
-    <div class="header"></div>
+    <div class="header">
+         <Particles />
+    </div>
     <transition>
         <router-view :key = "$route.fullpath"/>
     </transition>
@@ -8,8 +10,12 @@
 </template>
 
 <script>
+import Particles from "@/components/particles";
 export default {
   name: "Article",
+  components: {
+    Particles
+  },
   methods: {
     goBack() {}
   }
