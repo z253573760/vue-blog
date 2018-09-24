@@ -18,7 +18,7 @@
     <grid
     :draggable="true"
     :sortable="true"
-    :items="list"
+    :items="showList"
     :height="100"
     :width="100"
     :center="true"
@@ -46,6 +46,7 @@ export default {
     return {
       items: ["a", "b", "c"],
       show: false,
+      showList: [],
       list: [
         { text: "javascript" },
         { text: "html" },
@@ -90,7 +91,17 @@ export default {
     ...mapState(["subjectList"])
   },
   created() {
-    console.log(this.sty);
+    let index = 0;
+    const tiemr = setInterval(() => {
+      if (index == 4) {
+        clearInterval(tiemr);
+        setTimeout(() => {
+          this.showList = this.list;
+        }, 0);
+      }
+      this.showList.push(this.list[index]);
+      index += 1;
+    }, 800);
   }
 };
 </script>
