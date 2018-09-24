@@ -1,4 +1,5 @@
 import subject from "../api/subject";
+
 const actions = {
   getSubjects: async ({ commit }) => {
     const {

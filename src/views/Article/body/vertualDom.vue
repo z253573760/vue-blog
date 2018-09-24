@@ -12,7 +12,7 @@
         <img src="@/assets/image/vertualDom2.png" alt="" @click="bigImg">
         <img src="@/assets/image/vertualDom3.png" alt="" @click="bigImg">
         <img src="@/assets/image/vertualDom4.png" alt="" @click="bigImg">
-        <!-- <DialogImg :show="show" :imgSrc="imgSrc"/> -->
+        <img src="@/assets/image/vertualDom5.png" alt="" @click="bigImg">
     </div>
 </template>
 <script>
