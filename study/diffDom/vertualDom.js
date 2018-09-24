@@ -19,7 +19,7 @@ class Element {
    * @param { string } key
    * @param { string } val
    */
-  static setAttr(node, key, val) {
+  setAttr(node, key, val) {
     switch (key) {
       case "value": //node 是一个Input 或者 Textarea
         if (
@@ -45,7 +45,7 @@ class Element {
    * @param { Element } vNode Element 的实例 虚拟DOM
    * @return { DomElement } el 真实DOM
    */
-  static render(vNode) {
+  render(vNode = this) {
     let el = document.createElement(vNode.type);
     for (const key in vNode.props) {
       this.setAttr(el, key, vNode.props[key]);
@@ -60,7 +60,7 @@ class Element {
     return el;
   }
 }
-
+console.log(Element);
 /**
  * dom diff
  * 1. js对象 模拟 vertualDom

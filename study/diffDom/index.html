@@ -66,8 +66,10 @@ const vertualDom2 = Element.createElement(
   ]
 );
 
-diff(vertualDom,vertualDom2)
-const dom = Element.render(vertualDom);
+// diff(vertualDom,vertualDom2)
+console.log(vertualDom)
+const dom = vertualDom.render();
+console.log(dom)
 const app = document.getElementById("app");
 app.appendChild(dom);
 </script>
