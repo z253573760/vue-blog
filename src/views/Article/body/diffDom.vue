@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       body: {
-        title: "学习vertualDom以及Dom diff"
+        title: "学习vertualDom以及DomDiff"
       }
     };
   }

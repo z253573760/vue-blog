@@ -2,14 +2,17 @@
   <div class="article" >
     <div class="header"></div>
     <transition>
-        <router-view  :key = "$route.fullpath"/>
+        <router-view :key = "$route.fullpath"/>
     </transition>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Article"
+  name: "Article",
+  methods: {
+    goBack() {}
+  }
 };
 </script>
 
@@ -19,13 +22,13 @@ export default {
   background: #eeeeee;
   color: black;
   height: 100%;
+  position: relative;
   .header {
     height: px2rem(200px);
     background-size: 100% 100%;
     font-size: px2rem(80px);
     filter: blur(3px);
     background-image: url("../../assets/image/Article-herader.jpg");
-    position: relative;
   }
   &::before {
     content: "Blog";

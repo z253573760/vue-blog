@@ -21,7 +21,7 @@ export default {
     return {
       navs: [
         { title: "Home", path: "/" },
-        { title: "About", path: "/about" },
+        { title: "Skill", path: "/skill" },
         { title: "Article", path: "/article" }
       ]
     };

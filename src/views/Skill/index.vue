@@ -1,12 +1,6 @@
 <template>
-  <div class="about">
-    <transition 
-    clsss="animated"
-    enter-active-class="bounceIn" 
-    leave-active-class="bounceOut"
-    >
-      <p>一个91年的菜鸟码农</p>
-    </transition>
+  <div class="skill">
+    <div class="header"></div>
     <p>
       <span>前端:</span>
       <van-button 
@@ -85,18 +79,40 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/css/mixin.scss";
 
-.about {
-  @extend .bg;
-  text-align: left;
+.skill {
   background: #eeeeee;
   color: black;
+  height: 100%;
+  padding: 0;
+  &::before {
+    width: 100%;
+    text-align: center;
+    content: "Skill";
+    height: px2rem(200px);
+    line-height: px2rem(200px);
+    font-weight: bold;
+    color: white;
+    font-size: px2rem(80px);
+    letter-spacing: px2rem(3px);
+    position: absolute;
+    z-index: 1;
+  }
+  .header {
+    height: px2rem(200px);
+    background-size: 100% 100%;
+    font-size: px2rem(80px);
+    filter: blur(2px);
+    background-image: url("../../assets/image/Skill-header.png");
+  }
   p {
+    padding: px2rem(30px);
+    text-align: left;
     height: px2rem(100px);
     line-height: px2rem(100px);
   }
   .btn {
     text-align: center;
-    width: px2rem(127px);
+    width: px2rem(160px);
     padding: px2rem(1px);
   }
 }

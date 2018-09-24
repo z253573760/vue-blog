@@ -17,9 +17,9 @@ export default new Router({
       redirect: "/"
     },
     {
-      path: "/about",
-      name: "about",
-      component: () => import("@/views/About")
+      path: "/skill",
+      name: "skill",
+      component: () => import("@/views/Skill")
     },
     {
       path: "/article",
