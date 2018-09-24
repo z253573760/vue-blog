@@ -1,7 +1,6 @@
 <template>
   <div class="skill">
     <div class="header">
-         <Particles />
     </div>
     <p>
       <van-button 
@@ -19,11 +18,7 @@
 </template>
 <script>
 import { mapActions, mapState } from "vuex";
-import Particles from "@/components/particles";
 export default {
-  components: {
-    Particles
-  },
   data() {
     return {
       sty: { height: `${200 / 37.5}px` },
