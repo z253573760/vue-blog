@@ -8,19 +8,32 @@
           一个对象(虚拟DOM)让我们要把DOM的操作全部反应在这个JS对象身上，最终再把这
           个JS对象映射到真是DOM中交给浏览器渲染。
         </p>
-        <img src="@/assets/image/vertualDom1.png" alt="">
-        <img src="@/assets/image/vertualDom2.png" alt="">
-        <img src="@/assets/image/vertualDom3.png" alt="">
+        <img src="@/assets/image/vertualDom1.png" alt="" @click="bigImg">
+        <img src="@/assets/image/vertualDom2.png" alt="" @click="bigImg">
+        <img src="@/assets/image/vertualDom3.png" alt="" @click="bigImg">
+        <img src="@/assets/image/vertualDom4.png" alt="" @click="bigImg">
+        <!-- <DialogImg :show="show" :imgSrc="imgSrc"/> -->
     </div>
 </template>
 <script>
+import DialogImg from "@/components/dialogImg";
 export default {
+  components: {
+    DialogImg
+  },
   data() {
     return {
+      show: true,
+      imgSrc: "http://localhost:8010/img/vertualDom1.0df6efef.png",
       body: {
         title: "学习vertualDom"
       }
     };
+  },
+  methods: {
+    bigImg(event) {
+      console.log(event.currentTarget.src);
+    }
   }
 };
 </script>

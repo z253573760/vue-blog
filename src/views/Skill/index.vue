@@ -2,25 +2,12 @@
   <div class="skill">
     <div class="header"></div>
     <p>
-      <span>前端:</span>
       <van-button 
       type="default" 
       v-for="(item,index) in webList" 
       :key="index"
       @click="linkto(item.href)"
-      v-color="'red'"
-      class="btn"
-      >
-      {{item.text}}
-      </van-button>
-    </p>
-    <p>
-      <span>后端:</span>
-      <van-button 
-      type="default"
-      v-for="(item,index) in serverList" 
-      :key="index"
-      @click="linkto(item.href)"
+      v-color="'black'"
       class="btn"
       >
       {{item.text}}
@@ -35,6 +22,10 @@ export default {
     return {
       show: false,
       webList: [
+        { text: "javascript" },
+        { text: "html" },
+        { text: "css3" },
+        { text: "scss" },
         {
           text: "dva.js",
           href: "https://dvajs.com/"
@@ -42,9 +33,7 @@ export default {
         {
           text: "vue.js",
           href: "https://cn.vuejs.org/"
-        }
-      ],
-      serverList: [
+        },
         {
           text: "egg.js",
           href: "https://eggjs.org/zh-cn/index.html"
@@ -53,6 +42,11 @@ export default {
           text: "sequelize.js",
           href: "http://docs.sequelizejs.com/"
         },
+        { text: "koa2.js" },
+        { text: "mysql" },
+        { text: "redis" },
+        { text: "python" },
+        { text: "golang" },
         {
           text: "gin",
           href: "https://godoc.org/github.com/gin-gonic/gin"
@@ -64,7 +58,7 @@ export default {
     ...mapActions(["getSubjects"]),
     linkto(href) {
       this.$emit("func", href);
-      window.open(href);
+      href && window.open(href);
     }
   },
   computed: {
@@ -105,7 +99,7 @@ export default {
     background-image: url("../../assets/image/Skill-header.png");
   }
   p {
-    padding: px2rem(30px);
+    padding: px2rem(50px);
     text-align: left;
     height: px2rem(100px);
     line-height: px2rem(100px);
