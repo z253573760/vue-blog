@@ -9,6 +9,8 @@
 </template>
 
 <script>
+import handler from "@/assets/js/touchMove";
+document.body.removeEventListener("touchmove", handler, false);
 export default {
   name: "Article",
   methods: {

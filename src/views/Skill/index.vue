@@ -39,6 +39,9 @@
 </template>
 <script>
 import { mapActions, mapState } from "vuex";
+import handler from "@/assets/js/touchMove";
+document.body.addEventListener("touchmove", handler, false);
+
 export default {
   data() {
     return {
