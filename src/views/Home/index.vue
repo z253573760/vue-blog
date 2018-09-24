@@ -28,11 +28,12 @@
 <script>
 import getRouter from "@/mixin/getRouter";
 import handler from "@/assets/js/touchMove";
-document.body.addEventListener("touchmove", handler, false);
 export default {
   name: "Home",
   mixins: [getRouter],
-  created() {}
+  created() {
+    document.body.addEventListener("touchmove", handler, false);
+  }
 };
 </script>
 <style lang="scss" scoped>
