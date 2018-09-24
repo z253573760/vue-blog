@@ -26,7 +26,7 @@ export default {
       show: true,
       imgSrc: "http://localhost:8010/img/vertualDom1.0df6efef.png",
       body: {
-        title: "学习vertualDom"
+        title: "学习vertualDom和diffDom(一)"
       }
     };
   },

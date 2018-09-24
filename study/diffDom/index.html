@@ -11,3 +11,63 @@
 </body>
 </html>
 <script src="./vertualDom.js"></script>
+<script src="./diffDom.js"></script>
+<script>
+    const vertualDom = Element.createElement(
+  "ul",
+  {
+    class: "ul-warper"
+  },
+  [
+    Element.createElement(
+      "li",
+      {
+        class: "li-warper",
+        style: "color:red"
+      },
+      [
+        Element.createElement("p", {}, ["a"]),
+        Element.createElement("p", {}, ["b"])
+      ]
+    ),
+    Element.createElement(
+      "li",
+      {
+        class: "li-warper"
+      },
+      ["2"]
+    )
+  ]
+);
+const vertualDom2 = Element.createElement(
+  "ul",
+  {
+    class: "change"
+  },
+  [
+    Element.createElement(
+      "li",
+      {
+        class: "li-warper",
+        style: "color:red"
+      },
+      [
+        Element.createElement("p", {}, ["a"]),
+        Element.createElement("p", {}, ["b"])
+      ]
+    ),
+    Element.createElement(
+      "li",
+      {
+        class: "li-warper"
+      },
+      ["2"]
+    )
+  ]
+);
+
+diff(vertualDom,vertualDom2)
+const dom = Element.render(vertualDom);
+const app = document.getElementById("app");
+app.appendChild(dom);
+</script>

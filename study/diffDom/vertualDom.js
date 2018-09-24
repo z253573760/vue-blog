@@ -60,37 +60,7 @@ class Element {
     return el;
   }
 }
-const vertualDom = Element.createElement(
-  "ul",
-  {
-    class: "ul-warper"
-  },
-  [
-    Element.createElement(
-      "li",
-      {
-        class: "li-warper",
-        style: "color:red"
-      },
-      [
-        Element.createElement("p", {}, ["a"]),
-        Element.createElement("p", {}, ["b"])
-      ]
-    ),
-    Element.createElement(
-      "li",
-      {
-        class: "li-warper"
-      },
-      ["2"]
-    )
-  ]
-);
-console.log(vertualDom);
-const dom = Element.render(vertualDom);
-console.log(dom);
-const app = document.getElementById("app");
-app.appendChild(dom);
+
 /**
  * dom diff
  * 1. js对象 模拟 vertualDom
