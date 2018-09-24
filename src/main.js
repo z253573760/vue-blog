@@ -9,6 +9,8 @@ import "animate.css/animate.min.css";
 import "@/assets/css/reset.css";
 import "@/assets/js/rem.js";
 import "@/components/global.js";
+import Grid from "vue-js-grid";
+Vue.use(Grid);
 // import axios from "axios";
 Vue.use(Vant);
 Vue.use(VueParticles);

@@ -2,10 +2,10 @@
   <div class="skill">
     <div class="header">
     </div>
-    <p>
+    <!-- <p>
       <van-button 
       type="default" 
-      v-for="(item,index) in webList" 
+      v-for="(item,index) in list" 
       :key="index"
       @click="linkto(item.href)"
       v-color="'black'"
@@ -13,6 +13,27 @@
       >
       {{item.text}}
       </van-button>
+    </p> -->
+    <p>
+    <grid
+    :draggable="true"
+    :sortable="true"
+    :items="list"
+    :height="100"
+    :width="100"
+    :center="true"
+    >
+        <template slot="cell" scope="props">
+         <van-button
+            v-color="'black'"
+            type="default" 
+            @click="linkto(props.item.href)"
+            class="btn"
+         >
+            {{props.item.text}}
+         </van-button>
+     </template>
+    </grid>
     </p>
   </div>
 </template>
@@ -21,30 +42,30 @@ import { mapActions, mapState } from "vuex";
 export default {
   data() {
     return {
-      sty: { height: `${200 / 37.5}px` },
+      items: ["a", "b", "c"],
       show: false,
-      webList: [
+      list: [
         { text: "javascript" },
         { text: "html" },
         { text: "css3" },
         { text: "scss" },
         {
-          text: "dva.js",
+          text: "dva",
           href: "https://dvajs.com/"
         },
         {
-          text: "vue.js",
+          text: "vue",
           href: "https://cn.vuejs.org/"
         },
         {
-          text: "egg.js",
+          text: "egg",
           href: "https://eggjs.org/zh-cn/index.html"
         },
         {
-          text: "sequelize.js",
+          text: "sequelize",
           href: "http://docs.sequelizejs.com/"
         },
-        { text: "koa2.js" },
+        { text: "koa2" },
         { text: "mysql" },
         { text: "redis" },
         { text: "python" },
@@ -101,15 +122,16 @@ export default {
     background-image: url("../../assets/image/Skill-header.png");
   }
   p {
-    padding: px2rem(50px);
+    padding-top: px2rem(50px);
     text-align: left;
     height: px2rem(100px);
     line-height: px2rem(100px);
   }
   .btn {
     text-align: center;
-    width: px2rem(160px);
+    width: px2rem(120px);
     padding: px2rem(1px);
+    box-shadow: -1px 1px 1px #888888;
   }
 }
 </style>

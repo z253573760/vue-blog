@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <div class="nav-warpper">
-      <van-button type="default" plain @click='CHANGE_MENU' :style="blk">
+      <van-button type="default" plain
+        @click='CHANGE_MENU' 
+        :style="blk"
+        @dragover="drop"
+      >
         <van-icon name="wap-nav"/>
       </van-button>
     </div>
@@ -51,6 +55,9 @@ export default {
     fatherFunc(data) {
       console.log("我是父组件的方法----", data);
     },
+    drop(event) {
+      console.log(event);
+    },
     ...mapMutations(["CHANGE_MENU"])
   },
   computed: {
@@ -70,6 +77,7 @@ export default {
   color: white;
   background-color: black;
   height: 100%;
+  user-select: none;
   .nav-warpper {
     position: fixed;
     top: 2%;

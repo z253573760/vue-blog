@@ -43,6 +43,7 @@ export default {
   }
   .lizi {
     height: 70%;
+    user-select: none;
   }
 }
 </style>
