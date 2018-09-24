@@ -18,7 +18,7 @@ export default {
     return {
       loading: false,
       finished: true,
-      list: [{ id: 1, title: "学习vertualDom以及Dom diff" }]
+      list: [{ id: 1, title: "学习vertualDom" }]
     };
   },
   methods: {

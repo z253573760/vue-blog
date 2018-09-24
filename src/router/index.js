@@ -32,7 +32,7 @@ export default new Router({
         },
         {
           path: "1",
-          component: () => import("@/views/Article/body/diffDom")
+          component: () => import("@/views/Article/body/vertualDom")
         }
       ]
     }
