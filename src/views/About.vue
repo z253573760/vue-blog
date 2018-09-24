@@ -86,8 +86,8 @@ export default {
 @import "@/assets/css/mixin.scss";
 
 .about {
-  padding: px2rem(80px);
-  height: 100%;
+  @extend .bg;
+  text-align: left;
   background: #eeeeee;
   color: black;
   p {

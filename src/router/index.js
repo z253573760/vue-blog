@@ -22,9 +22,19 @@ export default new Router({
       component: () => import("@/views/About")
     },
     {
-      path: "/404",
-      name: "404",
-      component: () => import("@/components/notFound")
+      path: "/article",
+      name: "article",
+      component: () => import("@/views/Article"),
+      children: [
+        {
+          path: "/",
+          component: () => import("@/views/Article/List")
+        },
+        {
+          path: "1",
+          component: () => import("@/views/Article/body/diffDom")
+        }
+      ]
     }
   ]
 });
