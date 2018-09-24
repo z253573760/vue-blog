@@ -60,7 +60,6 @@ class Element {
     return el;
   }
 }
-console.log(Element);
 /**
  * dom diff
  * 1. js对象 模拟 vertualDom
@@ -69,3 +68,4 @@ console.log(Element);
  *    差异得到差异对象
  * 4. 把差异对象应用到真是DOM树上
  */
+console.log(Element);
