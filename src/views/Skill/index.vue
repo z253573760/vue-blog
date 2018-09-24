@@ -39,10 +39,9 @@
 </template>
 <script>
 import { mapActions, mapState } from "vuex";
-import handler from "@/assets/js/touchMove";
-document.body.addEventListener("touchmove", handler, false);
-
+import touchMove from "@/mixin/touchMove";
 export default {
+  mixins: [touchMove],
   data() {
     return {
       items: ["a", "b", "c"],
