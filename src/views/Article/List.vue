@@ -33,7 +33,7 @@ export default {
   methods: {
     onLoad() {},
     linkTo(id) {
-      this.$router.push(`/articles/${id}`);
+      this.$router.push(`/article/${id}`);
     }
   }
 };
