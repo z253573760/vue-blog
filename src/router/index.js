@@ -41,6 +41,10 @@ export default new Router({
         {
           path: "3",
           component: () => import("@/views/Article/body/QuesttionsJS")
+        },
+        {
+          path: "4",
+          component: () => import("@/views/Article/body/DesignPattern")
         }
       ]
     }

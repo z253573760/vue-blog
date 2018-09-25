@@ -22,7 +22,8 @@ export default {
       list: [
         { id: 1, title: "学习vertualDom和diffDom(一)", date: "2018-09-23" },
         { id: 2, title: "2018前端面试题(CSS)", date: "2018-09-25" },
-        { id: 3, title: "2018前端面试题(JS)", date: "2018-09-25" }
+        { id: 3, title: "2018前端面试题(JS)", date: "2018-09-25" },
+        { id: 4, title: "设计模式", date: "2018-09-25" }
       ]
     };
   },
