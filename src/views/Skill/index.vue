@@ -42,7 +42,6 @@ export default {
   mixins: [touchMove],
   data() {
     return {
-      items: ["a", "b", "c"],
       show: false,
       showList: [],
       list: [

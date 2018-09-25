@@ -33,6 +33,14 @@ export default new Router({
         {
           path: "1",
           component: () => import("@/views/Article/body/vertualDom")
+        },
+        {
+          path: "2",
+          component: () => import("@/views/Article/body/QuestionsCSS")
+        },
+        {
+          path: "3",
+          component: () => import("@/views/Article/body/QuesttionsJS")
         }
       ]
     }

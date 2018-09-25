@@ -1,0 +1,23 @@
+/* 1.CSS的盒模型，绝对定位和相对定位 */
+box-sizing属性可以为三个值之一.
+content-box[default]: border和padding不计算入width之内
+border-box : padding计算入width内
+padding-box: border和padding计算入width之内，其实就是怪异模式了
+
+绝对定位相对定位 都是相对于父级元素所做的位移动，只不过绝对定位会
+脱离文档流
+
+1.利用flexbox布局
+2.利用绝对定位与transform
+3.利用定位与margin：auto
+4.margin-left:0  margin-left:0
+
+1.样式的层级关系:公有样式，私有样式
+2.选择器优先级:（!important>）id选择器>
+class选择器（属性选择器/伪类选择器）>标签选择器（伪元素选择器）
+3.样式冲突:如果同个元素有两个或以上冲突的CSS规则
+
+1.px:浏览器像素单位
+2.em:继承父级元素的字体大小
+3.rem:相对HTML根节点
+4.:link加载优先@import,@import可以同时加载其他CSS
