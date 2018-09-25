@@ -134,7 +134,7 @@ export default {
   }
   p {
     padding-top: px2rem(50px);
-    text-align: left;
+    text-align: center;
     height: px2rem(100px);
     line-height: px2rem(100px);
   }
