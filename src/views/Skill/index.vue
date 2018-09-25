@@ -142,7 +142,7 @@ export default {
     text-align: center;
     width: px2rem(120px);
     padding: px2rem(1px);
-    box-shadow: -1px 1px 5px rgba(67, 67, 68, 0.5);
+    box-shadow: -1px 2px 5px rgba(67, 67, 68, 0.5);
   }
 }
 </style>
