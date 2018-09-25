@@ -1,4 +1,4 @@
-import handler from "@/assets/js/touchMove";
+import handler from "@/utils/touchMove";
 
 const touchMove = {
   created() {

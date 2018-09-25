@@ -8,7 +8,7 @@ import VueParticles from "vue-particles";
 import "animate.css/animate.min.css";
 import "@/assets/css/reset.css";
 import "@/assets/js/rem.js";
-import "@/assets/js/touchMove.js";
+//import "@/utils/fastClick.js";
 import "@/components/global.js";
 import Grid from "vue-js-grid";
 Vue.use(Grid);

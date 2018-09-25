@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import handler from "@/assets/js/touchMove";
+import handler from "@/utils/touchMove";
 export default {
   name: "Article",
   methods: {

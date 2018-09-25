@@ -42,34 +42,36 @@
 const vertualDom2 = Element.createElement(
   "ul",
   {
-    class: "change"
+    // class: "change"
   },
   [
     Element.createElement(
       "li",
       {
-        class: "li-warper",
-        style: "color:red"
+        class: "li-warper2",
+        style: "color:pink"
       },
       [
-        Element.createElement("p", {}, ["a"]),
-        Element.createElement("p", {}, ["b"])
+        Element.createElement("span", {}, ["a"]),
+        Element.createElement("p", {}, ["v"])
       ]
     ),
     Element.createElement(
       "li",
       {
-        class: "li-warper"
+        class: "li-warper2"
       },
-      ["2"]
+      ["c"]
     )
   ]
 );
 
-// diff(vertualDom,vertualDom2)
+
 console.log(vertualDom)
 const dom = vertualDom.render();
 console.log(dom)
 const app = document.getElementById("app");
 app.appendChild(dom);
+const _diff = new Diff(vertualDom,vertualDom2)
+console.log(_diff)
 </script>

@@ -20,8 +20,8 @@ export default {
       loading: false,
       finished: true,
       list: [
-        { id: 1, title: "学习vertualDom和diffDom(一)", date: "2018-09-23" },
-        { id: 2, title: "学习vertualDom和diffDom(二)", date: "2018-09-24" }
+        { id: 1, title: "学习vertualDom和diffDom(一)", date: "2018-09-23" }
+        //{ id: 2, title: "学习vertualDom和diffDom(二)", date: "2018-09-24" }
       ]
     };
   },
