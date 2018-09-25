@@ -22,7 +22,7 @@ export default new Router({
       component: () => import("@/views/Skill")
     },
     {
-      path: "/article",
+      path: "/articles",
       name: "article",
       component: () => import("@/views/Article"),
       children: [

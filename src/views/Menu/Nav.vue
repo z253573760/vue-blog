@@ -22,7 +22,7 @@ export default {
       navs: [
         { title: "Home", path: "/" },
         { title: "Skill", path: "/skill" },
-        { title: "Article", path: "/article" }
+        { title: "Article", path: "/articles" }
       ]
     };
   },
