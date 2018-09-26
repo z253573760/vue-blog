@@ -10,7 +10,9 @@
 
 <script>
 import handler from "@/utils/touchMove";
+import loadding from "@/mixin/loading";
 export default {
+  mixins: [loadding],
   name: "Article",
   methods: {
     goBack() {}

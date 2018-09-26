@@ -27,10 +27,10 @@
 
 <script>
 import touchMove from "@/mixin/touchMove";
-
+import loading from "@/mixin/loading";
 export default {
   name: "Home",
-  mixins: [touchMove]
+  mixins: [touchMove, loading]
 };
 </script>
 <style lang="scss" scoped>

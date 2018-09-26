@@ -16,6 +16,7 @@
      >
       <Menu/>
     </van-popup>
+    <keep-alive>
     <transition name="slide-fade">
       <router-view 
       @func ="fatherFunc"
@@ -23,6 +24,7 @@
 
        />
     </transition>
+    </keep-alive>
   </div>
 </template>
 <script>
@@ -32,6 +34,7 @@ export default {
   components: {
     Menu
   },
+  created() {},
   data() {
     return {
       isShow: false,

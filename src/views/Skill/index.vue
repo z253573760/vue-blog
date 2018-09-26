@@ -38,8 +38,9 @@
 <script>
 import { mapActions, mapState } from "vuex";
 import touchMove from "@/mixin/touchMove";
+import loading from "@/mixin/loading";
 export default {
-  mixins: [touchMove],
+  mixins: [touchMove, loading],
   data() {
     return {
       show: false,
