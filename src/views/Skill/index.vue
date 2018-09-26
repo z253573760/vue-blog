@@ -36,9 +36,9 @@ export default {
       show: false,
       showList: [],
       list: [
-        { text: "javascript" },
         { text: "html" },
         { text: "css3" },
+        { text: "javascript" },
         { text: "scss" },
         { text: "dva" },
         { text: "vue" },
