@@ -11,7 +11,8 @@ import "@/assets/js/rem.js";
 //import "@/utils/fastClick.js";
 import "@/components/global.js";
 import Grid from "vue-js-grid";
-import Loading from "@/plugin/loading";
+console.log(VueParticles);
+import Loading from "@/plugin/vue-load";
 Vue.use(Loading);
 
 Vue.use(Grid);

@@ -5,6 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve ",
     "build": "vue-cli-service build",
+    "build-load":"vue-cli-service build --target lib --name flock src/plugin/vue-load/index.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -25,7 +26,6 @@
     "@vue/eslint-config-prettier": "^3.0.3",
     "babel-plugin-import": "^1.8.0",
     "babel-polyfill": "^6.26.0",
-    "fastclick": "^1.0.6",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
     "vue-template-compiler": "^2.5.17"

@@ -15,23 +15,13 @@
       </van-button>
     </p> -->
     <p>
-    <grid
-    :draggable="true"
-    :sortable="true"
-    :items="showList"
-    :center="true"
-    >
+      <grid :draggable="true" :sortable="true" :items="showList" :center="true">
         <template slot="cell" scope="props">
-         <van-button
-            v-color="'black'"
-            type="default" 
-            @click="linkto(props.item.href)"
-            class="btn"
-         >
+          <van-button v-color="'black'" type="default" @click="linkto(props.item)" class="btn">
             {{props.item.text}}
-         </van-button>
-     </template>
-    </grid>
+          </van-button>
+        </template>
+      </grid>
     </p>
   </div>
 </template>
@@ -50,39 +40,24 @@ export default {
         { text: "html" },
         { text: "css3" },
         { text: "scss" },
-        {
-          text: "dva",
-          href: "https://dvajs.com/"
-        },
-        {
-          text: "vue",
-          href: "https://cn.vuejs.org/"
-        },
-        {
-          text: "egg",
-          href: "https://eggjs.org/zh-cn/index.html"
-        },
-        {
-          text: "sequelize",
-          href: "http://docs.sequelizejs.com/"
-        },
+        { text: "dva" },
+        { text: "vue" },
+        { text: "egg" },
+        { text: "sequelize" },
         { text: "koa2" },
         { text: "mysql" },
         { text: "redis" },
         { text: "python" },
         { text: "golang" },
-        {
-          text: "gin",
-          href: "https://godoc.org/github.com/gin-gonic/gin"
-        }
+        { text: "gin" }
       ]
     };
   },
   methods: {
     ...mapActions(["getSubjects"]),
-    linkto(href) {
-      this.$emit("func", href);
-      href && window.open(href);
+    linkto() {
+      this.$emit("func");
+      // href && window.open(href);
     }
   },
   computed: {
