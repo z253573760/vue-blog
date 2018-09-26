@@ -1,15 +1,12 @@
-import Load from "./loading";
-// import { isString } from "./lib/helper";
-export default {
+import Load from "./template/loading";
+
+const loadingPlugin = {
   install(Vue) {
-    Vue.prototype.$myName = "我的插件";
     const Loading = Vue.extend(Load);
     const $vm = new Loading({
       el: document.createElement("div")
     });
-    console.log($vm);
     document.body.appendChild($vm.$el);
-
     const loading = {
       show() {
         $vm.show = true;
@@ -18,7 +15,6 @@ export default {
         $vm.show = false;
       }
     };
-
     if (!Vue.$loading) {
       Vue.$loading = loading;
     }
@@ -53,3 +49,4 @@ export default {
     // };
   }
 };
+export default loadingPlugin;
