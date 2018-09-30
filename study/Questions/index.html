@@ -9,12 +9,15 @@
 </head>
 
 <body>
-    <!-- <div class="box"> -->
-    <p class="p">
-        <span class="span1">1</span>
-        <span class="span2">2</span>
-    </p>
-    <!-- </div> -->
+    <div class="box">
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
 </body>
 
 </html>
@@ -25,40 +28,39 @@
     }
 
     .box {
-        width: 100px;
-        height: 200px;
+        width: 100%;
         background: pink;
+        display: flex;
+        /* justify-content:space-between; */
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: space-between;
+        font-size: 0px;
     }
-    .span1{
-        backgorund:red;
-        position: absolute;
-        top:0px;
-    }
-    .span2{
-        backgorund:yellow;
-    }
-    .p {
-        width: 50px;
+
+    p {
+        background: red;
+        width: 30%;
         height: 100px;
-        background: pink;
-        position: absolute;
-        left:100px;
-        /* top: 50px;
-        left: 50px; */
+        align-items: flex-start;
+        margin-left:2.5%;
+        margin-top:5px;
+        /* margin-top:20px; */
+        /* display: inline; */
     }
 </style>
 <!-- <script src="./二分查找.js"></script> -->
 <script>
     // const str1 = new String("1")
     // const str2 = "2"
-    
+
     // console.log(str1)
     // console.log(str2)
     // console.log(String.prototype===str1.__proto__)
     // console.log(String.prototype)
-    function Cat(){
-        this.name="xxx"
+    function Cat() {
+        this.name = "xxx"
     }
-   const cat = new Cat()
-   console.log(cat)
+    const cat = new Cat()
+    console.log(cat)
 </script>

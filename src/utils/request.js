@@ -2,7 +2,7 @@ import axios from "axios";
 import router from "../router";
 import { ERROR } from "@/utils/code";
 axios.defaults.timeout = 10000;
-axios.defaults.baseURL = "/api";
+axios.defaults.baseURL = "/v2";
 axios.defaults.headers.post["Content-Type"] =
   "application/x-www-form-urlencoded";
 

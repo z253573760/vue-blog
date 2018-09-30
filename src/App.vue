@@ -1,45 +1,37 @@
 <template>
   <div id="app">
     <div class="nav-warpper">
-      <van-button type="default" plain
-        @click='CHANGE_MENU' 
-        :style="blk"
-        @dragover="drop"
-      >
-        <van-icon name="wap-nav"/>
+      <van-button type="default" plain @click='CHANGE_MENU' :style="blk" @dragover="drop">
+        <van-icon name="wap-nav" />
       </van-button>
     </div>
-    <van-popup
-     v-model="isShow"
-     position="top"
-     @click-overlay ="CHANGE_MENU"
-     >
+    <van-popup v-model="isShow" position="top" @click-overlay="CHANGE_MENU">
       <Menu/>
     </van-popup>
-    <keep-alive>
     <transition name="slide-fade">
-      <router-view 
-      @func ="fatherFunc"
-      :key = "$route.fullpath"
-
-       />
+      <keep-alive>
+        <router-view @func="fatherFunc" :key="$route.fullpath" />
+      </keep-alive>
     </transition>
-    </keep-alive>
   </div>
 </template>
 <script>
 import Menu from "@/views/Menu";
 import { mapMutations, mapState } from "vuex";
+import { getList } from "@/api/subject";
 export default {
   components: {
     Menu
   },
-  created() {},
+  created() {
+    getList().then(data => {
+      console.log(data);
+    });
+  },
   data() {
     return {
       isShow: false,
       blk: {
-        // border: "0.1px solid",
         background: "white",
         color: "black"
       }

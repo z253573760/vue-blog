@@ -14,11 +14,29 @@ import loadding from "@/mixin/loading";
 export default {
   mixins: [loadding],
   name: "Article",
+  data() {
+    return {
+      text: "111"
+    };
+  },
   methods: {
     goBack() {}
   },
   created() {
     document.body.removeEventListener("touchmove", handler, false);
+  },
+  beforeDestory() {
+    console.log("beforeDestory()");
+  },
+  destory() {
+    console.log("Destory()");
+  },
+  beforeRouteEnter(to, from, next) {
+    next();
+    // next(vm => {
+    //   // console.log("next");
+    //   //   console.log((vm.text = 222));
+    // });
   }
 };
 </script>

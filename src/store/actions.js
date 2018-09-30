@@ -1,10 +1,10 @@
-import subject from "../api/subject";
+import { getList } from "../api/subject";
 
 const actions = {
   getSubjects: async ({ commit }) => {
     const {
       data: { data }
-    } = await subject.getList();
+    } = await getList();
     commit("saveSubjects", data);
   }
 };

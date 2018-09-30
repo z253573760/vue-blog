@@ -75,8 +75,8 @@ module.exports = {
     //  host: "localhost",
     proxy: {
       // 配置跨域处理 可以设置多个
-      "/api/*": {
-        target: "http://127.0.0.1:7001/",
+      "/v2": {
+        target: "http://api.douban.com/",
         // ws: true,
         changeOrigin: true
       }

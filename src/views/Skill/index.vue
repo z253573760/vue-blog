@@ -31,6 +31,9 @@ import touchMove from "@/mixin/touchMove";
 import loading from "@/mixin/loading";
 export default {
   mixins: [touchMove, loading],
+  // created() {
+  //   console.log("skill");
+  // },
   data() {
     return {
       show: false,
