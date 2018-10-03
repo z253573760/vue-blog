@@ -12,6 +12,9 @@ import "@/assets/js/rem.js";
 import "@/components/global.js";
 import Grid from "vue-js-grid";
 import Loading from "@/plugin/vue-load";
+// import VueTouch from "vue-touch";
+
+// console.log(VueTouch);
 Vue.use(Loading);
 
 Vue.use(Grid);
@@ -23,6 +26,7 @@ Vue.directive("color", {
     el.style.color = bindding.value;
   }
 });
+
 Vue.config.productionTip = false;
 new Vue({
   router,

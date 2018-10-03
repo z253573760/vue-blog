@@ -4,9 +4,11 @@ const mutations = {
     state.menuShow = !state.menuShow;
   },
   saveSubjects(state, data) {
-    console.log(data);
-    console.log(state);
     state.subjectList = data;
+  },
+  saveIp(state, data) {
+    state.count = data.count;
+    state.isNew = data.is_new;
   }
 };
 

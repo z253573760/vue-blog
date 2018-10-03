@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <CountUp :end="count"/>
     <div class="nav-warpper">
       <van-button type="default" plain @click='CHANGE_MENU' :style="blk" @dragover="drop">
         <van-icon name="wap-nav" />
@@ -17,16 +18,18 @@
 </template>
 <script>
 import Menu from "@/views/Menu";
-import { mapMutations, mapState } from "vuex";
-import { getList } from "@/api/subject";
+import CountUp from "@/components/count-up";
+import { mapMutations, mapState, mapActions } from "vuex";
+
 export default {
   components: {
-    Menu
+    Menu,
+    CountUp
   },
-  created() {
-    getList().then(data => {
-      console.log(data);
-    });
+  async created() {
+    this.$loading.show();
+    await this.getIp();
+    this.$loading.hide();
   },
   data() {
     return {
@@ -47,6 +50,7 @@ export default {
     }
   },
   methods: {
+    ...mapActions(["getIp"]),
     fatherFunc(data) {
       console.log("我是父组件的方法----", data);
     },
@@ -57,7 +61,9 @@ export default {
   },
   computed: {
     ...mapState({
-      menuShow: state => state.menuShow
+      menuShow: state => state.menuShow,
+      isNew: state => state.isNew,
+      count: state => state.count
     })
   }
 };

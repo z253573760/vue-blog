@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import handler from "@/utils/touchMove";
-import loadding from "@/mixin/loading";
+// import handler from "@/utils/touchMove";
+import delTouch from "@/mixin/delTouch";
 export default {
-  mixins: [loadding],
+  mixins: [delTouch],
   name: "Article",
   data() {
     return {
@@ -21,9 +21,6 @@ export default {
   },
   methods: {
     goBack() {}
-  },
-  created() {
-    document.body.removeEventListener("touchmove", handler, false);
   },
   beforeDestory() {
     console.log("beforeDestory()");

@@ -6,7 +6,10 @@
 
 <script>
 export default {
-  name: "notFound"
+  name: "notFound",
+  created() {
+    this.$loading.hide();
+  }
 };
 </script>
 

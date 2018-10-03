@@ -18,9 +18,20 @@ export default new Router({
       redirect: "/"
     },
     {
+      path: "/404",
+      name: "notFound",
+      component: () => import("@/components/notFound")
+    },
+    {
       path: "/skill",
       name: "skill",
       component: () => import("@/views/Skill")
+    },
+    {
+      path: "/zone",
+      name: "zone",
+      component: () => import("@/views/Zone"),
+      children: [{ path: "/", component: () => import("@/views/Zone/aj") }]
     },
     {
       path: "/article",

@@ -9,6 +9,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 module.exports = {
   runtimeCompiler: true, //是否使用包含运行时编译器的 Vue 构建版本
   baseUrl: process.env.NODE_ENV === "production" ? "/blog/" : "/",
+  // baseUrl: process.env.NODE_ENV === "production" ? "/" : "/",
   productionSourceMap: false, //不在production环境使用SourceMap
   css: {
     loaderOptions: {
@@ -32,7 +33,7 @@ module.exports = {
           },
           output: {
             // 去掉注释内容
-            comments: false
+            comments: true
           }
         },
         sourceMap: false,
@@ -75,9 +76,9 @@ module.exports = {
     //  host: "localhost",
     proxy: {
       // 配置跨域处理 可以设置多个
-      "/v2": {
-        target: "http://api.douban.com/",
-        // ws: true,
+      "/api": {
+        //target: "http://119.29.165.40",
+        target: "http://localhost:7001",
         changeOrigin: true
       }
     }

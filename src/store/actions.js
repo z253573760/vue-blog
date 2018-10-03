@@ -1,11 +1,10 @@
-import { getList } from "../api/subject";
-
+import { getIp } from "../api/ip";
 const actions = {
-  getSubjects: async ({ commit }) => {
+  getIp: async ({ commit }) => {
     const {
       data: { data }
-    } = await getList();
-    commit("saveSubjects", data);
+    } = await getIp();
+    commit("saveIp", data);
   }
 };
 export default actions;

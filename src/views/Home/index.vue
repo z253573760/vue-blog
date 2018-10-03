@@ -27,10 +27,10 @@
 
 <script>
 import touchMove from "@/mixin/touchMove";
-import loading from "@/mixin/loading";
+// import loading from "@/mixin/loading";
 export default {
   name: "Home",
-  mixins: [touchMove, loading],
+  mixins: [touchMove],
   created() {
     console.log("home");
   }

@@ -2,7 +2,11 @@ import axios from "axios";
 import router from "../router";
 import { ERROR } from "@/utils/code";
 axios.defaults.timeout = 10000;
-axios.defaults.baseURL = "/v2";
+const baseURL =
+  process.env.NODE_ENV === "development"
+    ? "/api"
+    : "http://www.zhoucanyu.cn/api";
+axios.defaults.baseURL = baseURL;
 axios.defaults.headers.post["Content-Type"] =
   "application/x-www-form-urlencoded";
 
@@ -20,17 +24,18 @@ axios.interceptors.response.use(
     if (!(response.status >= 200 && response.status < 300)) {
       return response;
     }
-    if (response.data.data === ERROR) {
+    if (response.data.code === ERROR) {
       router.push({
         path: "/404"
       });
       return response;
     }
-
     return response;
   },
   function(error) {
-    // 对响应错误做点什么
+    router.push({
+      path: "/404"
+    });
     return Promise.reject(error);
   }
 );

@@ -1,6 +1,8 @@
 const state = {
   menuShow: false,
-  subjectList: []
+  subjectList: [],
+  count: 0,
+  isNew: false
 };
 
 export default state;
