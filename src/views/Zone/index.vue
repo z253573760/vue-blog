@@ -1,26 +1,59 @@
 <template>
-  <div class="hobby">
-    <router-view/>
-    <van-tabbar v-model="active">
-      <van-tabbar-item icon="chat">标签</van-tabbar-item>
-      <van-tabbar-item icon="records">标签</van-tabbar-item>
-    </van-tabbar>
+  <div class="hobby" ref="hobby">
+    <router-view class="view" />
+    <Tabar :show="show"/>
   </div>
 </template>
 <script>
 import delTouch from "@/mixin/delTouch";
-// import { ViewBox } from "vux";
+import Tabar from "./Tabar";
 export default {
-  components: {},
+  components: {
+    Tabar
+  },
   mixins: [delTouch],
   data() {
     return {
-      active: 0
+      isShow: true,
+      isScroll: false
     };
+  },
+  activated() {
+    this.isShow = true;
+    this.isScroll = false;
+  },
+  computed: {
+    show() {
+      return this.isScroll ? this.isShow : true;
+    }
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      this.isScroll = true;
+      const scrollTop =
+        window.pageYOffset ||
+        document.documentElement.scrollTop ||
+        document.body.scrollTop;
+      // console.log("scrollTop", scrollTop);
+      const windowHeight =
+        document.documentElement.clientHeight || document.body.clientHeight;
+      const scrollHeight =
+        document.documentElement.scrollHeight || document.body.scrollHeight;
+      // console.log(windowHeight);
+      // console.log(scrollHeight);
+      if (scrollTop + windowHeight >= scrollHeight) {
+        this.isShow = false;
+      } else {
+        this.isShow = true;
+      }
+    }
   }
 };
 </script>
-<style lang="scss" >
+<style lang="scss" scoped>
 .hobby {
   background: white;
   height: 100%;

@@ -7,18 +7,16 @@ import "vant/lib/vant-css/index.css";
 import VueParticles from "vue-particles";
 import "animate.css/animate.min.css";
 import "@/assets/css/reset.css";
+import "@/assets/css/mixin.scss";
 import "@/assets/js/rem.js";
-//import "@/utils/fastClick.js";
+import "@/utils/fastClick.js";
 import "@/components/global.js";
 import Grid from "vue-js-grid";
 import Loading from "@/plugin/vue-load";
-// import VueTouch from "vue-touch";
 
-// console.log(VueTouch);
 Vue.use(Loading);
 
 Vue.use(Grid);
-// import axios from "axios";
 Vue.use(Vant);
 Vue.use(VueParticles);
 Vue.directive("color", {

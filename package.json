@@ -12,6 +12,7 @@
     "animate.css": "^3.7.0",
     "axios": "^0.18.0",
     "countup": "^1.8.2",
+    "jsonp": "^0.2.1",
     "less": "^3.8.1",
     "less-loader": "^4.1.0",
     "mint-ui": "^2.2.13",

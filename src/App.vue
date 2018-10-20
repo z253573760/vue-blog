@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <CountUp :end="count"/>
-    <div class="nav-warpper">
+    <CountUp :end="count" />
+    <div class="nav-warpper" v-show="navShow">
       <van-button type="default" plain @click='CHANGE_MENU' :style="blk" @dragover="drop">
         <van-icon name="wap-nav" />
       </van-button>
@@ -63,7 +63,8 @@ export default {
     ...mapState({
       menuShow: state => state.menuShow,
       isNew: state => state.isNew,
-      count: state => state.count
+      count: state => state.count,
+      navShow: state => state.navShow
     })
   }
 };

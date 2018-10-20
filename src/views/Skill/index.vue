@@ -6,7 +6,7 @@
       <grid :draggable="true" :sortable="true" :items="showList" :center="true">
         <template slot="cell" scope="props">
           <van-button v-color="'black'" type="default" @click="linkto(props.item)" class="btn">
-            {{props.item.title}}
+           {{props.item.title}}
           </van-button>
         </template>
       </grid>
@@ -84,6 +84,7 @@ export default {
   .btn {
     text-align: center;
     width: px2rem(120px);
+    height: px2rem(80px);
     padding: px2rem(1px);
     box-shadow: -1px 2px 5px rgba(67, 67, 68, 0.5);
   }

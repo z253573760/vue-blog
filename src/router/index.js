@@ -31,7 +31,10 @@ export default new Router({
       path: "/zone",
       name: "zone",
       component: () => import("@/views/Zone"),
-      children: [{ path: "/", component: () => import("@/views/Zone/aj") }]
+      children: [
+        { path: "/", component: () => import("@/views/Zone/Acu") },
+        { path: "me", component: () => import("@/views/Zone/Me") }
+      ]
     },
     {
       path: "/article",
