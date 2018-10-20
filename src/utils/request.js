@@ -26,9 +26,10 @@ axios.interceptors.response.use(
       return response;
     }
     if (response.data.code === ERROR) {
-      router.push({
-        path: "/404"
-      });
+      // router.push({
+      //   path: "/404"
+      // });
+      console.log(response);
       return response;
     }
     return response;
