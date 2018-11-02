@@ -1,6 +1,7 @@
 // vue.config.js
 
 const path = require("path");
+
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
@@ -8,7 +9,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   runtimeCompiler: true, //是否使用包含运行时编译器的 Vue 构建版本
-  baseUrl: process.env.NODE_ENV === "production" ? "/blog/" : "/",
+  baseUrl: process.env.NODE_ENV === "production" ? "/" : "/",
   // baseUrl: process.env.NODE_ENV === "production" ? "/" : "/",
   productionSourceMap: false, //不在production环境使用SourceMap
   css: {
@@ -72,15 +73,15 @@ module.exports = {
   devServer: {
     //跨域
     port: 8010, // 端口号
-    open: false //配置自动启动浏览器
+    open: false, //配置自动启动浏览器
     //  host: "localhost",
-    // proxy: {
-    //   // 配置跨域处理 可以设置多个
-    //   "/api": {
-    //     //target: "http://119.29.165.40",
-    //     target: "http://localhost:7001",
-    //     changeOrigin: true
-    //   }
-    // }
+    proxy: {
+      // 配置跨域处理 可以设置多个
+      "/api": {
+        target: "http://119.29.165.40",
+        //target: "http://localhost:7001",
+        changeOrigin: true
+      }
+    }
   }
 };

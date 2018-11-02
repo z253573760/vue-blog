@@ -6,8 +6,7 @@ Vue.use(Router);
 export default new Router({
   mode: "history",
   base: process.env.BASE_URL,
-  routes: [
-    {
+  routes: [{
       path: "/",
       // redirect: "/home",
       name: "home",
@@ -31,36 +30,28 @@ export default new Router({
       path: "/zone",
       name: "zone",
       component: () => import("@/views/Zone"),
-      children: [
-        { path: "/", component: () => import("@/views/Zone/Acu") },
-        { path: "me", component: () => import("@/views/Zone/Me") }
+      children: [{
+          path: "/",
+          component: () => import("@/views/Zone/Acu")
+        },
+        {
+          path: "me",
+          component: () => import("@/views/Zone/Me")
+        }
       ]
     },
     {
       path: "/article",
       name: "article",
       component: () => import("@/views/Article"),
-      children: [
-        {
+      children: [{
           path: "/",
           component: () => import("@/views/Article/List")
         },
         {
-          path: "1",
-          component: () => import("@/views/Article/body/vertualDom")
+          path: ":id",
+          component: () => import("@/views/Article/content/index")
         },
-        {
-          path: "2",
-          component: () => import("@/views/Article/body/QuestionsCSS")
-        },
-        {
-          path: "3",
-          component: () => import("@/views/Article/body/QuesttionsJS")
-        },
-        {
-          path: "4",
-          component: () => import("@/views/Article/body/DesignPattern")
-        }
       ]
     }
   ]

@@ -13,6 +13,10 @@ import "@/utils/fastClick.js";
 import "@/components/global.js";
 import Grid from "vue-js-grid";
 import Loading from "@/plugin/vue-load";
+import {
+  fmtDate
+} from "@/filters"
+Vue.filter('fmtDate', fmtDate)
 
 Vue.use(Loading);
 

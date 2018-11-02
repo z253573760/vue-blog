@@ -1,7 +1,13 @@
 <template>
   <div class="aj">
-    <van-list v-model="loading" :finished="finished" @load="onLoad" :offset="400">
-      <img v-for="(item, key) in imageList" :key="key" :src="item.img"  @click="preview(item)">
+    <van-list v-model="loading"
+              :finished="finished"
+              @load="onLoad"
+              :offset="400">
+      <img v-for="(item, key) in imageList"
+           :key="key"
+           :src="item.img"
+           @click="preview(item)">
     </van-list>
   </div>
 </template>
@@ -37,13 +43,11 @@ export default {
       });
     },
     async onLoad() {
-      const {
-        data: { data }
-      } = await getZoneList(this.pageSize, this.current + 1);
+      const { data } = await getZoneList(this.pageSize, this.current + 1);
       this.loading = false;
-      this.imageList.push(...data.list);
+      this.imageList.push(...data.rows);
       this.current = data.current;
-      this.total = data.total;
+      this.total = data.count;
       if (this.imageList.length >= this.total) this.finished = true;
     }
   }

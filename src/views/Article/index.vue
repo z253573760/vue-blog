@@ -1,9 +1,9 @@
 <template>
-  <div class="article" >
+  <div class="article">
     <div class="header">
     </div>
     <transition>
-        <router-view :key = "$route.fullpath"/>
+      <router-view :key="$route.fullpath" />
     </transition>
   </div>
 </template>
@@ -19,22 +19,7 @@ export default {
       text: "111"
     };
   },
-  methods: {
-    goBack() {}
-  },
-  beforeDestory() {
-    console.log("beforeDestory()");
-  },
-  destory() {
-    console.log("Destory()");
-  },
-  beforeRouteEnter(to, from, next) {
-    next();
-    // next(vm => {
-    //   // console.log("next");
-    //   //   console.log((vm.text = 222));
-    // });
-  }
+  methods: {}
 };
 </script>
 

@@ -1,8 +1,12 @@
-import { getIp } from "../api/ip";
+import {
+  getIp
+} from "../api/ip";
 const actions = {
-  getIp: async ({ commit }) => {
+  getIp: async ({
+    commit
+  }) => {
     const {
-      data: { data }
+      data
     } = await getIp();
     commit("saveIp", data);
   }

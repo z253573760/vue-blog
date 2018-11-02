@@ -3,10 +3,17 @@
     <div class="header">
     </div>
     <p>
-      <grid :draggable="true" :sortable="true" :items="showList" :center="true">
-        <template slot="cell" scope="props">
-          <van-button v-color="'black'" type="default" @click="linkto(props.item)" class="btn">
-           {{props.item.title}}
+      <grid :draggable="true"
+            :sortable="true"
+            :items="showList"
+            :center="true">
+        <template slot="cell"
+                  scope="props">
+          <van-button v-color="'black'"
+                      type="default"
+                      @click="linkto(props.item)"
+                      class="btn">
+            {{props.item.title}}
           </van-button>
         </template>
       </grid>
@@ -38,9 +45,7 @@ export default {
   },
   async created() {
     this.$loading.show();
-    const {
-      data: { data }
-    } = await getSkillList();
+    const { data } = await getSkillList();
     this.$loading.hide();
     this.showList = data;
   }
