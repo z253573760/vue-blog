@@ -18,7 +18,7 @@ import {
 } from "@/filters"
 Vue.filter('fmtDate', fmtDate)
 
-Vue.use(Loading);
+ Vue.use(Loading);
 
 Vue.use(Grid);
 Vue.use(Vant);
