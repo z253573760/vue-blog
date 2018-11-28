@@ -25,6 +25,7 @@ module.exports = {
     config.entry.app = ["babel-polyfill", "./src/main.js"];
     //删除console插件
     let plugins = [
+      //只有打包生产环境才需要将console删除
       new UglifyJsPlugin({
         uglifyOptions: {
           compress: {
@@ -41,8 +42,14 @@ module.exports = {
         parallel: true
       })
     ];
-    //只有打包生产环境才需要将console删除
+    config.externals = {
+      vue: "Vue",
+      "vue-router": "VueRouter"
+    };
+
     if (process.env.VUE_APP_build_type == "production") {
+      config.plugins = [...config.plugins, ...plugins];
+    } else {
       config.plugins = [...config.plugins, ...plugins];
     }
   },
