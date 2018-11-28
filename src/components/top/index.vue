@@ -20,9 +20,6 @@ export default {
         scrollHander.timer = setTimeout(this.animate, 50);
       };
       window.addEventListener("scroll", scrollHander);
-      // this.$on("animateStop", () => {
-      //   window.removeEventListener("scroll", scrollHander);
-      // });
       this.$on("beforeDestroy", () => {
         window.removeEventListener("scroll", scrollHander);
       });

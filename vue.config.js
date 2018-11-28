@@ -44,7 +44,9 @@ module.exports = {
     ];
     config.externals = {
       vue: "Vue",
-      "vue-router": "VueRouter"
+      "vue-router": "VueRouter",
+      axios: "axios",
+      vuex: 'Vuex'
     };
 
     if (process.env.VUE_APP_build_type == "production") {

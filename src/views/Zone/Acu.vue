@@ -62,31 +62,7 @@ export default {
       this.current = data.current;
       this.total = data.count;
       if (this.imageList.length >= this.total) this.finished = true;
-    },
-    scroll() {
-      const scrollHander = () => {
-        clearTimeout(scrollHander.timer);
-        this.clsName = "top top-hide";
-        scrollHander.timer = setTimeout(this.animate, 50);
-      };
-      window.addEventListener("scroll", scrollHander);
-      // this.$on("animateStop", () => {
-      //   window.removeEventListener("scroll", scrollHander);
-      // });
-      this.$on("beforeDestroy", () => {
-        window.removeEventListener("scroll", scrollHander);
-      });
-    },
-    animate() {
-      this.clsName = "top";
     }
-  },
-  created() {
-    //this.scroll();
-    // this.watchScroll();
-  },
-  beforeDestroy() {
-    this.$emit("beforeDestroy");
   }
 };
 </script>
