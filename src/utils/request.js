@@ -28,19 +28,11 @@ axios.interceptors.response.use(
       return response;
     }
     if (response.data.code === ERROR) {
-      // router.push({
-      //   path: "/404"
-      // });
-
-      return response;
+      throw "请求错误"
     }
     return response.data;
   },
   function (error) {
-    // router.push({
-    //   path: "/404"
-    // });
-    console.log(error);
     return Promise.reject(error);
   }
 );

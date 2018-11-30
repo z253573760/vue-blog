@@ -1,5 +1,8 @@
 <template>
   <div class="aj">
+    <!-- <div :class="clsName"
+         @click="goScrollTop">Top</div> -->
+    <Top />
     <van-list v-model="loading"
               :finished="finished"
               @load="onLoad"
@@ -15,7 +18,12 @@
 import { ImagePreview } from "vant";
 import { getZoneList } from "@/api/zone";
 import { mapMutations } from "vuex";
+import { goScrollTop } from "@/utils";
+import Top from "@/components/top";
 export default {
+  components: {
+    Top
+  },
   data() {
     return {
       imageList: [],
@@ -24,7 +32,9 @@ export default {
       total: 0,
       current: 0,
       pageSize: 20,
-      imagePreview: null
+      imagePreview: null,
+      scrollTop: -1,
+      clsName: "top"
     };
   },
   beforeRouteLeave(to, from, next) {
@@ -33,6 +43,9 @@ export default {
   },
   methods: {
     ...mapMutations(["changeNavShow"]),
+    goScrollTop() {
+      goScrollTop();
+    },
     preview(item) {
       this.changeNavShow(false);
       const images = this.imageList.map(_ => _.img);
@@ -56,10 +69,27 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/css/mixin.scss";
+.top {
+  position: fixed;
+  right: 0;
+  background: rgba($color: #000000, $alpha: 0.7);
+  bottom: 10%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 10px;
+  color: white;
+  transition: all 0.3s linear;
+  transform: translate(0, -50%);
+  font-weight: bold;
+}
+.top-hide {
+  right: -80px;
+}
+
 .aj {
   background: white;
-  // position: fixed;
-  // top: 0;
   height: 80%;
   width: 100%;
   color: black;
