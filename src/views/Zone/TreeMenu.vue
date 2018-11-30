@@ -65,9 +65,6 @@ export default {
   created() {
     const arr = Array(this.list.length).fill(false);
     this.statusArr = arr;
-    const time1 = new Date().getTime("15:44");
-    const time2 = new Date().getTime("18:44");
-    console.log(time1, time2);
   },
   data() {
     return {
