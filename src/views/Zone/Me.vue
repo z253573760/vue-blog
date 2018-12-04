@@ -1,10 +1,10 @@
 
 <template>
   <div class="test">
-    <h2>
-      <!-- 敬请期待... -->
+    <!-- <h2 @click="add">
+      敬请期待...
 
-    </h2>
+    </h2> -->
     <TreeMenu :list="menu" />
   </div>
 </template>
@@ -15,6 +15,11 @@ import TreeMenu from "./TreeMenu";
 export default {
   components: {
     TreeMenu
+  },
+  methods: {
+    add() {
+      this.menu.push({ title: "xasdads" });
+    }
   },
   data() {
     return {
