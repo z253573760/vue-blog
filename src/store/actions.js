@@ -8,6 +8,7 @@ const actions = {
     const {
       data
     } = await getIp();
+    window.localStorage.lastTime = new Date().getTime()
     commit("saveIp", data);
   }
 };

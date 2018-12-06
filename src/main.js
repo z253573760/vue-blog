@@ -5,7 +5,7 @@ import store from "@/store";
 import Vant from "vant";
 import "vant/lib/vant-css/index.css";
 import VueParticles from "vue-particles";
-import "animate.css/animate.min.css";
+// import "animate.css/animate.min.css";
 import "@/assets/css/reset.css";
 import "@/assets/css/mixin.scss";
 import "@/assets/js/rem.js";
@@ -18,7 +18,7 @@ import {
 } from "@/filters"
 Vue.filter('fmtDate', fmtDate)
 
- Vue.use(Loading);
+Vue.use(Loading);
 
 Vue.use(Grid);
 Vue.use(Vant);

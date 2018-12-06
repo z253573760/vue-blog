@@ -46,13 +46,14 @@ module.exports = {
       vue: "Vue",
       "vue-router": "VueRouter",
       axios: "axios",
-      vuex: "Vuex"
+      vuex: "Vuex",
+      Vant: "vant"
     };
 
     if (process.env.VUE_APP_build_type == "production") {
       config.plugins = [...config.plugins, ...plugins];
     } else {
-      //  config.plugins = [...config.plugins, ...plugins];
+      config.plugins = [...config.plugins, ...plugins];
     }
   },
   //允许对内部的 webpack 配置进行更细粒度的修改。

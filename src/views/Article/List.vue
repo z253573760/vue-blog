@@ -49,3 +49,22 @@ export default {
   }
 };
 </script>
+<style lang="scss" scoped>
+.list-move {
+  transition: transform 1s;
+}
+.list-complete-item {
+  transition: all 1s;
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-complete-enter, .list-complete-leave-to
+/* .list-complete-leave-active for below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.list-complete-leave-active {
+  position: absolute;
+}
+</style>
+
