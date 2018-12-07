@@ -16,9 +16,9 @@
   position: relative;
   color: black;
   display: inline-block;
-  width: px2rem(150px);
-  height: px2rem(150px);
-  background: white;
+  width: px2rem(170px);
+  height: px2rem(170px);
+  background: rgba(255, 255, 255, 0.6);
   border-radius: px2rem(30px);
   .box {
     display: inline-block;
@@ -38,7 +38,7 @@
   .weekday {
     font-size: px2rem(24px);
     color: white;
-    background: skyblue;
+    background: rgba(113, 195, 250, 0.6);
     height: px2rem(45px);
     line-height: px2rem(45px);
     border-top-left-radius: px2rem(30px);
@@ -46,7 +46,7 @@
   }
   .date {
     font-size: px2rem(80px);
-    line-height: px2rem(105px);
+    line-height: px2rem(120px);
     border-radius: px2rem(30px);
   }
 }

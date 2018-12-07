@@ -18,7 +18,8 @@
 <style lang="scss" scoped>
 @import "@/assets/css/mixin.scss";
 .warpper {
-  padding-top: px2rem(40px);
+  padding: px2rem(20px);
+  padding-top: px2rem(30px);
   font-weight: bold;
   color: #e8e8e8;
   .holiday-warpper {
@@ -33,7 +34,7 @@
     }
   }
   .calendar-warpper {
-    padding-top: px2rem(30px);
+    padding-top: px2rem(15px);
   }
 }
 </style>
