@@ -1,17 +1,24 @@
 <template>
 	<div class="me">
      <transition enter-active-class="rubberBand animated">
-			<img v-if="menuShow" class="headimgurl" src="@/assets/image/touxiang.jpg" alt="这是头像">
+			<img @click="linkTo" v-if="menuShow" class="headimgurl" src="@/assets/image/touxiang.jpg" alt="这是头像">
     </transition>
 	</div>
 </template>
 
 <script>
-import { mapState } from "vuex";
+import { mapState, mapMutations } from "vuex";
 export default {
   name: "me",
   computed: {
+    ...mapMutations(["CHANGE_MENU"]),
     ...mapState(["menuShow"])
+  },
+  methods: {
+    linkTo() {
+      this.$router.push("/");
+      this.CHANGE_MENU();
+    }
   }
 };
 </script>

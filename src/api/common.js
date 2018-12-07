@@ -1,10 +1,9 @@
 import axios from "../utils/request";
 
-export const getIp = function () {
+export const getIp = function() {
   return axios.get(`/ip`);
 };
 
-export const getHoliday = function () {
-
-  return axios.get(`/holiday`);
+export const getWether = function() {
+  return axios.get(`/wether`);
 };

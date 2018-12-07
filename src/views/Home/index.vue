@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import Card from "./card";
+import Card from "./Card";
 export default {
   components: { Card }
 };
@@ -35,7 +35,7 @@ export default {
   background-size: 100% 100%;
   text-align: center;
   padding-top: px2rem(80px);
-  background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1538683921366&di=3e64bfc89e58633d8ce3c37ed8c14295&imgtype=0&src=http%3A%2F%2Fimg4q.duitang.com%2Fuploads%2Fitem%2F201501%2F22%2F20150122175012_LkLN8.jpeg");
+  background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544197806957&di=3162c3b5dea3517229b4e92be0f5ce81&imgtype=0&src=http%3A%2F%2Fpic1.zhimg.com%2Fv2-74611be189aafe44800641030cecad58_b.jpg");
   .text {
     font-size: $fontSize;
   }

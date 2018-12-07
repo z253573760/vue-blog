@@ -4,34 +4,31 @@
       type="default"
       @click ='linkto(item.path,key)' 
       class="btn animated" 
-      v-for="(item,key) in navs" 
+      v-for="(item,key) in menuList" 
       :key="key"
       ref="btn"
       >
-      {{item.title}}
+      {{item.meta.title}}
     </van-button>
 	</div>
 </template>
 
 <script>
 import { mapMutations } from "vuex";
+import routes from "@/router/routes";
 export default {
-  name: "Nav",
-  data() {
-    return {
-      navs: [
-        { title: "Home", path: "/" },
-        { title: "Skill", path: "/skill" },
-        { title: "Article", path: "/article" },
-        { title: "Zone", path: "/zone" }
-      ]
-    };
-  },
   methods: {
     ...mapMutations(["CHANGE_MENU"]),
     linkto(path) {
       this.$router.push(path);
       this.CHANGE_MENU();
+    }
+  },
+  computed: {
+    menuList() {
+      const { path } = this.$route;
+      const menuList = routes.filter(item => item.meta && item.path !== path);
+      return menuList;
     }
   }
 };

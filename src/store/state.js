@@ -5,11 +5,8 @@ const state = {
   isNew: false,
   navShow: true,
   ip: {
-    city: "厦门市x",
-    cityId: 0,
-    ip: "",
-    isp: "",
-    province: ""
+    city: "厦门",
+    region: "福建"
   }
 };
 

@@ -86,8 +86,8 @@ module.exports = {
     proxy: {
       // 配置跨域处理 可以设置多个
       "/api": {
-        target: "http://119.29.165.40",
-        //target: "http://localhost:7001",
+        //target: "http://119.29.165.40",
+        target: "http://localhost:7001",
         changeOrigin: true
       }
     }

@@ -8,7 +8,9 @@
                   plain
                   @click='CHANGE_MENU'
                   :style="blk"
-                  @dragover="drop">
+                  @dragover="drop" 
+                 v-show="isShowBtn"
+                  >
         <van-icon name="wap-nav" />
       </van-button>
     </div>
@@ -47,7 +49,8 @@ export default {
       blk: {
         background: "white",
         color: "black"
-      }
+      },
+      isShowBtn: false
     };
   },
   watch: {
@@ -57,6 +60,10 @@ export default {
         this.blk.background = cur ? "#969696" : "white";
         this.isShow = cur;
       }
+    },
+    $route() {
+      const { path } = this.$route;
+      this.isShowBtn = !(path === "/");
     }
   },
   methods: {
@@ -105,10 +112,10 @@ export default {
 /* 可以设置不同的进入和离开动画 */
 /* 设置持续时间和动画函数 */
 .slide-fade-enter-active {
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 .slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
 }
 .slide-fade-enter, 
 .slide-fade-leave-to

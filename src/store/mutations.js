@@ -9,7 +9,7 @@ const mutations = {
   saveIp(state, data) {
     state.count = data.count;
     state.isNew = data.isNew;
-    state.ip = data
+    state.ip = data;
   },
   changeNavShow(state, data) {
     state.navShow = data;
