@@ -8,7 +8,8 @@ const mutations = {
   },
   saveIp(state, data) {
     state.count = data.count;
-    state.isNew = data.is_new;
+    state.isNew = data.isNew;
+    state.ip = data
   },
   changeNavShow(state, data) {
     state.navShow = data;

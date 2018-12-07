@@ -1,5 +1,6 @@
 <template>
-  <div class="skill">
+  <div class="skill"
+       @touchmove.prevent="()=>{}">
     <div class="header">
     </div>
     <p>
@@ -22,11 +23,9 @@
 </template>
 <script>
 import { mapActions, mapState } from "vuex";
-import touchMove from "@/mixin/touchMove";
 import { getSkillList } from "@/api/skill";
 // import loading from "@/mixin/loading";
 export default {
-  mixins: [touchMove],
   data() {
     return {
       show: false,
