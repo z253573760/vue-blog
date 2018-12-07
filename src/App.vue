@@ -37,7 +37,8 @@ export default {
   },
   async created() {
     this.$loading.show();
-    this.isShowWelcome && (await this.getIp());
+    this.isShowWelcome && this.saveLastTime();
+    await this.getIp();
     this.$loading.hide();
   },
   data() {
@@ -60,7 +61,10 @@ export default {
   },
   methods: {
     ...mapActions(["getIp"]),
-    ...mapMutations(["CHANGE_MENU"])
+    ...mapMutations(["CHANGE_MENU"]),
+    saveLastTime() {
+      window.localStorage.lastTime = new Date().getTime();
+    }
   },
   computed: {
     ...mapState({
@@ -74,7 +78,7 @@ export default {
       if (!lastTime) return true;
       const nowTime = new Date().getTime();
       const diff = nowTime - lastTime;
-      return diff > 24 * 60 * 60 ? true : false;
+      return diff > 24 * 60 * 60 * 60 ? true : false;
     }
   }
 };

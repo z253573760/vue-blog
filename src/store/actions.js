@@ -1,14 +1,13 @@
 import {
   getIp
-} from "../api/ip";
+} from "@/api/common";
 const actions = {
-  getIp: async ({
+  async getIp({
     commit
-  }) => {
+  }) {
     const {
       data
     } = await getIp();
-    window.localStorage.lastTime = new Date().getTime()
     commit("saveIp", data);
   }
 };
