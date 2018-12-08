@@ -79,7 +79,7 @@ export default {
     background-size: 100% 100%;
     font-size: px2rem(80px);
     filter: blur(2px);
-    background-image: url("../../assets/image/Skill-header.png");
+    background-image: url("../../assets/image/Skill-header.jpg");
   }
   p {
     padding-top: px2rem(50px);
