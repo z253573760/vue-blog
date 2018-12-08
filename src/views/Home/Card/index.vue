@@ -21,7 +21,7 @@
 @import "@/assets/css/mixin.scss";
 .warpper {
   padding: px2rem(20px);
-  padding-top: px2rem(30px);
+  padding-top: px2rem(60px);
   font-weight: bold;
   color: #e8e8e8;
   height: 100vh;

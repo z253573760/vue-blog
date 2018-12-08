@@ -1,6 +1,6 @@
 <template>
   <div class="hobby" ref="hobby">
-    <router-view class="view" />
+    <router-view class="view animated pulse" />
     <Tabar :show="show"/>
   </div>
 </template>

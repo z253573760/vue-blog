@@ -37,7 +37,7 @@ export default {
 @import "@/assets/css/mixin.scss";
 .menu-icon-wapper {
   position: fixed;
-  bottom: 20%;
+  bottom: 10%;
   .item {
     position: relative;
     width: px2rem(100px) !important;

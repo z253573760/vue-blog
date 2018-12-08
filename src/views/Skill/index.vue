@@ -1,7 +1,8 @@
 <template>
   <div class="skill"
        @touchmove.prevent="()=>{}">
-    <div class="header">
+    <div class="animated pulse">
+      <div class="header">
     </div>
     <p>
       <grid :draggable="true"
@@ -19,6 +20,7 @@
         </template>
       </grid>
     </p>
+    </div>
   </div>
 </template>
 <script>

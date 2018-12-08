@@ -1,11 +1,13 @@
 <template>
-  <div class="article">
+<div class="article">
+    <div class="animated pulse">
     <div class="header">
     </div>
     <transition>
       <router-view :key="$route.fullpath" />
     </transition>
   </div>
+</div>
 </template>
 
 <script>
