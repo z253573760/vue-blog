@@ -1,5 +1,5 @@
 <template>
-    <div class="mask" v-show="!isMobile||show"  @touchmove.prevent="()=>{}">
+    <div class="mask" v-if="!isMobile||show"  @touchmove.prevent="()=>{}">
         <div class="title">{{txt}}</div>
     </div>
 </template>

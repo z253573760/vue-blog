@@ -60,9 +60,9 @@ export default {
   transition: all 0.3s linear;
   transform: translate(0, -50%);
   font-weight: bold;
+  z-index: 999;
 }
 .top-hide {
   right: -80px;
 }
 </style>
-

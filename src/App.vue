@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Top/>
     <CountUp v-if="isShowWelcome"
              :end="count" />
     <div class="nav-warpper"
@@ -29,13 +30,15 @@
 </template>
 <script>
 import Menu from "@/views/Menu";
+import Top from "@/components/top";
 import CountUp from "@/components/count-up";
 import { mapMutations, mapState, mapActions } from "vuex";
 
 export default {
   components: {
     Menu,
-    CountUp
+    CountUp,
+    Top
   },
   async created() {
     this.$loading.show();

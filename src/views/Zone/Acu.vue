@@ -1,8 +1,6 @@
 <template>
   <div class="aj">
-    <!-- <div :class="clsName"
-         @click="goScrollTop">Top</div> -->
-    <Top />
+
     <van-list v-model="loading"
               :finished="finished"
               @load="onLoad"
@@ -18,12 +16,8 @@
 import { ImagePreview } from "vant";
 import { getZoneList } from "@/api/zone";
 import { mapMutations } from "vuex";
-import { goScrollTop } from "@/utils";
-import Top from "@/components/top";
+
 export default {
-  components: {
-    Top
-  },
   data() {
     return {
       imageList: [],
@@ -43,9 +37,6 @@ export default {
   },
   methods: {
     ...mapMutations(["changeNavShow"]),
-    goScrollTop() {
-      goScrollTop();
-    },
     preview(item) {
       this.changeNavShow(false);
       const images = this.imageList.map(_ => _.img);
