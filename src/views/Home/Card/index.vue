@@ -4,7 +4,7 @@
       <van-row :gutter="16">
         <van-col span="16"
                  class="holiday-warpper ">
-          <div class="item">{{ip.region}} {{ip.city}} {{wether.tem1}} {{wether.wea}} </div>
+          <div class="item">{{city}} {{wether.tem1}} {{wether.wea}} </div>
           <div class="item" style="text-align:left">{{wether.air_tips}}</div>
         </van-col>
         <van-col span="4"
@@ -51,6 +51,7 @@ export default {
   components: { Calendar, MenuIcon },
   data() {
     return {
+      city: "厦门",
       wether: {
         wea: "",
         tem1: "",
@@ -65,6 +66,7 @@ export default {
     async getWether() {
       const { data } = await getWether();
       const today = data.data[0];
+      this.city = data.city;
       this.wether = today;
     }
   },
