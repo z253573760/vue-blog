@@ -15,4 +15,4 @@ Vue Egg sequelize mysql redis
 
 # 后台管理
 
-![image](https://tool.gifhome.com/giftools/compress/preview?name=02735c2fd7f0c69ff848f61fa1918f87&w=960&q=20)
+![image](https://github.com/z253573760/vue-blog/blob/master/src/assets/image/admin.png?raw=true)
