@@ -18,8 +18,4 @@ npm run serve
 npm run build
 ```
 
-### Lints and fixes files
-
-```
-npm run lint
-```
+![image](https://github.com/Yesi-hoang/TaoBaoTopLine/blob/master/Gif/TaoBaoTopLineGif.gif)
