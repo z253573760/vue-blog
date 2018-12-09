@@ -23,11 +23,11 @@ Vue.use(Grid);
 Vue.use(Vant);
 Vue.use(VueParticles);
 
-Vue.directive("color", {
-  bind(el, bindding) {
-    el.style.color = bindding.value;
-  }
-});
+// Vue.directive("color", {
+//   bind(el, bindding) {
+//     el.style.color = bindding.value;
+//   }
+// });
 
 Vue.config.productionTip = false;
 new Vue({
