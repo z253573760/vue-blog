@@ -18,4 +18,4 @@ npm run serve
 npm run build
 ```
 
-![image](https://github.com/Yesi-hoang/TaoBaoTopLine/blob/master/Gif/TaoBaoTopLineGif.gif)
+![image](https://gitee.com/zhoucanyu/blog/tree/master/src/assets/imag/blog.gif)
