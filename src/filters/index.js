@@ -1,8 +1,8 @@
 export const fmtDate = function(obj) {
-  var date = new Date(obj);
-  var y = 1900 + date.getYear();
-  var m = "0" + (date.getMonth() + 1);
-  var d = "0" + date.getDate();
+  const date = new Date(obj);
+  const y = 1900 + date.getYear();
+  const m = "0" + (date.getMonth() + 1);
+  const d = "0" + date.getDate();
   return (
     y +
     "-" +
