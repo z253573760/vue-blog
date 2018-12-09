@@ -3,7 +3,7 @@ import App from "@/App.vue";
 import router from "@/router";
 import store from "@/store";
 import Vant from "vant";
-import "vant/lib/vant-css/index.css";
+// import "vant/lib/vant-css/index.css";
 import VueParticles from "vue-particles";
 // import "animate.css/animate.min.css";
 import "@/assets/css/reset.css";
