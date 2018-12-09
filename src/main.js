@@ -15,11 +15,10 @@ import Grid from "vue-js-grid";
 import Loading from "@/plugin/vue-load";
 import MatchMedia from "@/plugin/match-media";
 import { fmtDate } from "@/filters";
-Vue.filter("fmtDate", fmtDate);
 
+Vue.filter("fmtDate", fmtDate);
 Vue.use(Loading);
 Vue.use(MatchMedia);
-
 Vue.use(Grid);
 Vue.use(Vant);
 Vue.use(VueParticles);
