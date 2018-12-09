@@ -42,6 +42,7 @@ module.exports = {
         parallel: true
       })
     ];
+
     config.externals = {
       vue: "Vue",
       "vue-router": "VueRouter",
