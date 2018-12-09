@@ -1,4 +1,4 @@
-# blog3
+# blog
 
 ## Project setup
 
@@ -18,4 +18,4 @@ npm run serve
 npm run build
 ```
 
-![image](https://gitee.com/zhoucanyu/blog/blob/master/src/assets/image/blog.gif)
+![image](https://tool.gifhome.com/giftools/compress/preview?name=8582d7fbf9a06fc92c7c6ac23834d723&w=448&q=40)
