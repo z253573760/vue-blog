@@ -1,11 +1,11 @@
 // vue.config.js
 
 const path = require("path");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   runtimeCompiler: true, //是否使用包含运行时编译器的 Vue 构建版本
