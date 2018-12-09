@@ -2,7 +2,9 @@
 
 # 技术栈
 
-Vue Egg sequelize mysql redis
+移动端: vue vant
+admin: vue element-ui
+服务器: egg sequelize mysql redis nginx
 
 # 在线访问
 
