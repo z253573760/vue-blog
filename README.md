@@ -1,18 +1,22 @@
-# blog
+# vue-blog
+
+前后端分离的个人博客  
+[移动端](http://119.29.165.40)
 
 # 技术栈
 
-移动端: vue vant  
-admin: vue element-ui  
+移动端: vue-cli3 vue2.x vant
+admin: vue-cli3 vue2.x elemetn
 服务器: egg sequelize mysql redis nginx
 
-下载依赖:npm install  
-项目启动:npm run serve 打开 localhost:8010  
+# Setup
+
+```
+所需环境 node
+下载依赖:npm install
+项目启动:npm run serve 打开 localhost:8010
 项目打包:npm run build
-
-# 在线访问
-
-[移动端](http://119.29.165.40)
+```
 
 <!-- [后台管理](http://119.29.165.40:8010) -->
 
