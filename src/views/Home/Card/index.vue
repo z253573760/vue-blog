@@ -5,16 +5,17 @@
         <van-col span="16"
                  class="holiday-warpper ">
           <div class="item">{{city}} {{wether.tem1}} {{wether.wea}} </div>
-          <div class="item" style="text-align:left">{{wether.air_tips}}</div>
+          <div class="item"
+               style="text-align:left">{{wether.air_tips}}</div>
         </van-col>
         <van-col span="4"
                  class="calendar-warpper">
           <Calendar />
         </van-col>
       </van-row>
-      <MenuIcon/>
+      <MenuIcon />
     </div>
- 
+
   </div>
 </template>
 <style lang="scss" scoped>
@@ -60,7 +61,9 @@ export default {
     };
   },
   async created() {
+    this.$loading.show();
     await this.getWether();
+    this.$loading.hide();
   },
   methods: {
     async getWether() {
