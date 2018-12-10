@@ -6,8 +6,8 @@
 # 技术栈
 
 ```
-移动端: vue-cli3 vue2.x vant
-admin: vue-cli3 vue2.x element
+移动端: vue-cli3 vue2.x vant-ui
+admin: vue-cli3 vue2.x element-ui
 服务器: egg sequelize mysql redis nginx
 ```
 

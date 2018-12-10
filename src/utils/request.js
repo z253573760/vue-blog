@@ -1,4 +1,7 @@
 import axios from "axios";
+import {
+  Notify
+} from 'vant';
 import router from "../router";
 import {
   ERROR
@@ -28,7 +31,9 @@ axios.interceptors.response.use(
       return response;
     }
     if (response.data.code === ERROR) {
-      throw "请求错误"
+      window.vue.$loading.hide()
+      Notify("服务器错误")
+      throw "服务器错误"
     }
     return response.data;
   },
