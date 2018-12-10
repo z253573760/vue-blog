@@ -5,6 +5,9 @@
 移动端: vue vant  
 admin: vue element-ui  
 服务器: egg sequelize mysql redis nginx
+下载依赖:npm install  
+项目启动:npm run serve 打开 localhost:8010  
+项目打包:npm run build
 
 # 在线访问
 
