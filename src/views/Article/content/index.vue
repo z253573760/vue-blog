@@ -4,7 +4,8 @@
     <p class="time">
       <span>{{updateTime|fmtDate}}</span>
     </p>
-    <div v-html="content"></div>
+    <div class="article"
+         v-html="content"></div>
   </div>
 </template>
 <script>
@@ -56,6 +57,9 @@ export default {
   }
   .time {
     text-align: right;
+  }
+  .article {
+    overflow-x: hidden;
   }
 }
 </style>

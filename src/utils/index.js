@@ -12,6 +12,7 @@ export const fmtDate = function (obj) {
   );
 };
 
+
 function smoothScroll() {
   const currentScroll =
     document.documentElement.scrollTop || document.body.scrollTop;

@@ -3,23 +3,23 @@
        @touchmove.prevent="()=>{}">
     <div class="animated pulse">
       <div class="header">
-    </div>
-    <p>
-      <grid :draggable="true"
-            :sortable="true"
-            :items="showList"
-            :center="true">
-        <template slot="cell"
-                  scope="props">
-          <van-button v-color="'black'"
-                      type="default"
-                      @click="linkto(props.item)"
-                      class="btn">
-            {{props.item.title}}
-          </van-button>
-        </template>
-      </grid>
-    </p>
+      </div>
+      <p>
+        <grid :draggable="true"
+              :sortable="true"
+              :items="showList"
+              :center="true">
+          <template slot="cell"
+                    scope="props">
+            <van-button v-color="'black'"
+                        type="default"
+                        @click="linkto(props.item)"
+                        class="btn">
+              {{props.item.title}}
+            </van-button>
+          </template>
+        </grid>
+      </p>
     </div>
   </div>
 </template>
@@ -39,6 +39,10 @@ export default {
     linkto() {
       this.$emit("func");
       // href && window.open(href);
+    },
+    async getSkillList() {
+      const { data } = await getSkillList();
+      this.showList = data;
     }
   },
   computed: {
@@ -46,9 +50,8 @@ export default {
   },
   async created() {
     this.$loading.show();
-    const { data } = await getSkillList();
+    await this.getSkillList();
     this.$loading.hide();
-    this.showList = data;
   }
 };
 </script>

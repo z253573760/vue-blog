@@ -28,7 +28,7 @@ export default {
 
   async created() {
     this.$loading.show();
-    this.getList();
+    await this.getList();
     this.$loading.hide();
   },
   methods: {
