@@ -1,11 +1,11 @@
 // vue.config.js
 
 const path = require("path");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   runtimeCompiler: true, //是否使用包含运行时编译器的 Vue 构建版本
@@ -25,7 +25,6 @@ module.exports = {
     config.entry.app = ["babel-polyfill", "./src/main.js"];
     //删除console插件
     let plugins = [
-      //只有打包生产环境才需要将console删除
       new UglifyJsPlugin({
         uglifyOptions: {
           compress: {
@@ -42,21 +41,21 @@ module.exports = {
         parallel: true
       })
     ];
-    config.externals = {
-      vue: "Vue",
-      "vue-router": "VueRouter",
-      axios: "axios",
-      vuex: "Vuex",
-      Vant: "vant"
-    };
-    if (process.env.NODE_ENV == "production") {
-      //   config.plugins = [...config.plugins, ...plugins];
+    //只有打包生产环境才需要将console删除
+    if (process.env.VUE_APP_build_type == "production") {
+      config.plugins = [...config.plugins, ...plugins];
     }
   },
   //允许对内部的 webpack 配置进行更细粒度的修改。
   chainWebpack: config => {
     //命名
-    config.resolve.alias.set("SRC", resolve("src"));
+    config.resolve.alias
+      .set("SRC", resolve("src"))
+      .set("ASSET", resolve("src/assets"))
+      .set("VIEW", resolve("src/components/page"))
+      .set("COMPONENT", resolve("src/components/common"))
+      .set("UTIL", resolve("src/utils"))
+      .set("SERVICE", resolve("src/services"));
     //打包文件带hash
     config.output.filename("[name].[hash].js").end();
 
@@ -79,8 +78,8 @@ module.exports = {
     proxy: {
       // 配置跨域处理 可以设置多个
       "/api": {
-        target: "http://119.29.165.40",
         //target: "http://localhost:7001",
+        target: "http://119.29.165.40:8010",
         changeOrigin: true
       }
     }
