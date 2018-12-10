@@ -49,16 +49,14 @@ module.exports = {
       vuex: "Vuex",
       Vant: "vant"
     };
-    config.plugins = [...config.plugins, ...plugins];
     if (process.env.NODE_ENV == "production") {
-      //  config.plugins = [...config.plugins, ...plugins];
+      //   config.plugins = [...config.plugins, ...plugins];
     }
   },
   //允许对内部的 webpack 配置进行更细粒度的修改。
   chainWebpack: config => {
     //命名
-    config.resolve.alias
-      .set("SRC", resolve("src"))
+    config.resolve.alias.set("SRC", resolve("src"));
     //打包文件带hash
     config.output.filename("[name].[hash].js").end();
 
