@@ -12,13 +12,6 @@ module.exports = {
   baseUrl: process.env.NODE_ENV === "production" ? "/" : "/",
   // baseUrl: process.env.NODE_ENV === "production" ? "/" : "/",
   productionSourceMap: false, //不在production环境使用SourceMap
-  css: {
-    loaderOptions: {
-      less: {
-        javascriptEnabled: true
-      }
-    }
-  },
   lintOnSave: process.env.NODE_ENV !== "production",
   configureWebpack: config => {
     //入口文件
