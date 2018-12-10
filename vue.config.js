@@ -1,17 +1,24 @@
 // vue.config.js
 
 const path = require("path");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   runtimeCompiler: true, //是否使用包含运行时编译器的 Vue 构建版本
   baseUrl: process.env.NODE_ENV === "production" ? "/" : "/",
   // baseUrl: process.env.NODE_ENV === "production" ? "/" : "/",
   productionSourceMap: false, //不在production环境使用SourceMap
+  css: {
+    loaderOptions: {
+      less: {
+        javascriptEnabled: true
+      }
+    }
+  },
   lintOnSave: process.env.NODE_ENV !== "production",
   configureWebpack: config => {
     //入口文件
@@ -35,7 +42,6 @@ module.exports = {
         parallel: true
       })
     ];
-
     config.externals = {
       vue: "Vue",
       "vue-router": "VueRouter",
@@ -43,9 +49,9 @@ module.exports = {
       vuex: "Vuex",
       Vant: "vant"
     };
-
+    config.plugins = [...config.plugins, ...plugins];
     if (process.env.NODE_ENV == "production") {
-      config.plugins = [...config.plugins, ...plugins];
+      //  config.plugins = [...config.plugins, ...plugins];
     }
   },
   //允许对内部的 webpack 配置进行更细粒度的修改。
@@ -53,11 +59,6 @@ module.exports = {
     //命名
     config.resolve.alias
       .set("SRC", resolve("src"))
-      .set("ASSET", resolve("src/assets"))
-      .set("VIEW", resolve("src/components/page"))
-      .set("COMPONENT", resolve("src/components/common"))
-      .set("UTIL", resolve("src/utils"))
-      .set("SERVICE", resolve("src/services"));
     //打包文件带hash
     config.output.filename("[name].[hash].js").end();
 
