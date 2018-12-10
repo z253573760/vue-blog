@@ -1,13 +1,17 @@
 # vue-blog
 
-前后端分离的个人博客  
-[移动端](http://119.29.165.40)
+```
+前后端分离的个人博客
+在线访问：[移动端](http://119.29.165.40)
+```
 
 # 技术栈
 
+```
 移动端: vue-cli3 vue2.x vant
 admin: vue-cli3 vue2.x elemetn
 服务器: egg sequelize mysql redis nginx
+```
 
 # Setup
 
