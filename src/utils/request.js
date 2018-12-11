@@ -1,7 +1,11 @@
 import axios from "axios";
+import {
+  Notify
+} from "vant";
 import router from "../router";
 import {
-  ERROR
+  ERROR,
+  SUCCESS
 } from "@/utils/code";
 axios.defaults.timeout = 10000;
 // const baseURL =
@@ -27,8 +31,10 @@ axios.interceptors.response.use(
     if (!(response.status >= 200 && response.status < 300)) {
       return response;
     }
-    if (response.data.code === ERROR) {
-      throw "请求错误"
+    if (response.data.code !== SUCCESS) {
+      window.vue.$loading.hide();
+      Notify("服务器错误");
+      throw "服务器错误";
     }
     return response.data;
   },
