@@ -48,17 +48,11 @@ module.exports = {
       vuex: "Vuex",
       Vant: "vant"
     };
-<<<<<<< HEAD
 
     if (process.env.NODE_ENV == "production") {
       config.plugins = [...config.plugins, ...plugins];
     }
-=======
-    //只有打包生产环境才需要将console删除
-    // if (process.env.NODE_ENV == "production") {
-    //   config.plugins = [...config.plugins, ...plugins];
-    // }
->>>>>>> 04a3cad9fdb7a477718614efc4ff71ab5d91a699
+
   },
   //允许对内部的 webpack 配置进行更细粒度的修改。
   chainWebpack: config => {
