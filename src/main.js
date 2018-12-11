@@ -12,10 +12,10 @@ import "@/components/global.js";
 import Grid from "vue-js-grid";
 import Loading from "@/plugin/vue-load";
 import MatchMedia from "@/plugin/match-media";
-import {
-  fmtDate
-} from "@/filters";
-Vue.filter("fmtDate", fmtDate);
+import * as filters from "./filters";
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key]);
+});
 
 Vue.use(Loading);
 Vue.use(MatchMedia);
