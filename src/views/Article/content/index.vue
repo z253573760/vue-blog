@@ -12,7 +12,7 @@ import { getArticle } from "@/api/article";
 
 export default {
   async created() {
-    this.getArticle();
+    await this.getArticle();
   },
   mounted() {
     document.getElementsByClassName("v-note-op")[0].style.display = "none";
