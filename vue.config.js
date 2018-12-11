@@ -41,21 +41,24 @@ module.exports = {
         parallel: true
       })
     ];
+    config.externals = {
+      vue: "Vue",
+      "vue-router": "VueRouter",
+      axios: "axios",
+      vuex: "Vuex",
+      Vant: "vant"
+    };
     //只有打包生产环境才需要将console删除
-    if (process.env.VUE_APP_build_type == "production") {
-      config.plugins = [...config.plugins, ...plugins];
-    }
+    // if (process.env.NODE_ENV == "production") {
+    //   config.plugins = [...config.plugins, ...plugins];
+    // }
   },
   //允许对内部的 webpack 配置进行更细粒度的修改。
   chainWebpack: config => {
     //命名
     config.resolve.alias
-      .set("SRC", resolve("src"))
       .set("ASSET", resolve("src/assets"))
-      .set("VIEW", resolve("src/components/page"))
-      .set("COMPONENT", resolve("src/components/common"))
-      .set("UTIL", resolve("src/utils"))
-      .set("SERVICE", resolve("src/services"));
+
     //打包文件带hash
     config.output.filename("[name].[hash].js").end();
 

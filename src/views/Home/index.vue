@@ -34,7 +34,7 @@ export default {
   height: 100%;
   background-size: 100% 100%;
   text-align: center;
-  background-image: url("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1544197806957&di=3162c3b5dea3517229b4e92be0f5ce81&imgtype=0&src=http%3A%2F%2Fpic1.zhimg.com%2Fv2-74611be189aafe44800641030cecad58_b.jpg");
+  background-image: url("http://pji0d7zo8.bkt.clouddn.com/bg.png");
   .text {
     font-size: $fontSize;
   }
