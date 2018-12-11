@@ -13,16 +13,20 @@ import Grid from "vue-js-grid";
 import Loading from "@/plugin/vue-load";
 import MatchMedia from "@/plugin/match-media";
 import * as filters from "./filters";
-Object.keys(filters).forEach(key => {
-  Vue.filter(key, filters[key]);
-});
-
+import mavonEditor from "mavon-editor";
+import "mavon-editor/dist/css/index.css";
+Vue.use(mavonEditor);
 Vue.use(Loading);
 Vue.use(MatchMedia);
 
 Vue.use(Grid);
 Vue.use(Vant);
 Vue.use(VueParticles);
+
+Object.keys(filters).forEach(key => {
+  Vue.filter(key, filters[key]);
+});
+
 Vue.directive("color", {
   bind(el, bindding) {
     el.style.color = bindding.value;
@@ -36,4 +40,4 @@ const vue = new Vue({
   render: h => h(App)
 }).$mount("#app");
 
-window.vue = vue
+window.vue = vue;

@@ -4,22 +4,29 @@
     <p class="time">
       <span>{{updateTime|fmtDate}}</span>
     </p>
-    <div class="article"
-         v-html="html"></div>
+      <mavon-editor v-model="content"  ref="md"/>
   </div>
 </template>
 <script>
 import { getArticle } from "@/api/article";
+
 export default {
   async created() {
     this.getArticle();
   },
+  mounted() {
+    document.getElementsByClassName("v-note-op")[0].style.display = "none";
+    document.getElementsByClassName("v-note-edit")[0].style.display = "none";
+    document.getElementsByClassName("v-note-show")[0].style.flex = 1;
+    document.getElementsByClassName("v-show-content")[0].style.width = "100%";
+  },
   data() {
     return {
       title: "",
-      html: "",
+      content: "",
       updateTime: new Date(),
       createTime: new Date()
+      // toolbars
     };
   },
   methods: {
@@ -28,15 +35,12 @@ export default {
         data: {
           title,
           content,
-          html,
           create_time: createTime,
           update_time: updateTime
         }
       } = await getArticle(this.id);
       this.title = title;
-      this.html = html;
-      console.log(content);
-      // console.log(this.html);
+      this.content = content;
       this.createTime = createTime;
       this.updateTime = updateTime;
     }
@@ -66,4 +70,3 @@ export default {
   }
 }
 </style>
-

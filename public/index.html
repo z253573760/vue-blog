@@ -16,12 +16,28 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@1.4/lib/index.css" />
   <title>灿灿's Blog</title>
+  <style>
+    .v-note-op,
+    .v-note-edit {
+      display: none !important;
+
+    }
+
+    .v-note-show {
+      flex: 1
+    }
+
+    .v-show-content {
+      width: 100%;
+    }
+  </style>
 </head>
 <script src="https://cdn.bootcss.com/vue/2.5.17/vue.runtime.min.js"></script>
 <script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
 <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
 <script src="https://cdn.bootcss.com/vuex/3.0.1/vuex.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vant@1.4/lib/vant.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
 
 <body>
   <noscript>
