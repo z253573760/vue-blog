@@ -5,7 +5,7 @@
       <span>{{updateTime|fmtDate}}</span>
     </p>
     <div class="article"
-         v-html="content"></div>
+         v-html="html"></div>
   </div>
 </template>
 <script>
@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       title: "",
-      content: "",
+      html: "",
       updateTime: new Date(),
       createTime: new Date()
     };
@@ -28,12 +28,15 @@ export default {
         data: {
           title,
           content,
+          html,
           create_time: createTime,
           update_time: updateTime
         }
       } = await getArticle(this.id);
       this.title = title;
-      this.content = content;
+      this.html = html;
+      console.log(content);
+      // console.log(this.html);
       this.createTime = createTime;
       this.updateTime = updateTime;
     }

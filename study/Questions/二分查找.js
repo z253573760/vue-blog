@@ -21,7 +21,6 @@ function findIndex(arr, item, start = 0, end = arr.length - 1) {
   }
 }
 const result = findIndex([1, 2, 3, 4, 5], 3);
-console.log(result);
 
 /**
  * 快排
