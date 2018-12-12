@@ -2,6 +2,7 @@
 
 const path = require("path");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
+// const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
 function resolve(dir) {
   return path.join(__dirname, dir);
@@ -15,7 +16,7 @@ module.exports = {
   css: {
     loaderOptions: {
       less: {
-        javascriptEnabled: true
+        javascriptEnabled: truecnpm
       }
     }
   },
@@ -24,7 +25,7 @@ module.exports = {
     //入口文件
     config.entry.app = ["babel-polyfill", "./src/main.js"];
     //删除console插件
-    let plugins = [
+    const plugins = [
       new UglifyJsPlugin({
         uglifyOptions: {
           compress: {
