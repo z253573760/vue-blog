@@ -4,7 +4,12 @@
     <p class="time">
       <span>{{updateTime|fmtDate}}</span>
     </p>
-      <mavon-editor v-model="content"  ref="md"/>
+    <mavon-editor v-model="content"
+                  ref="md"
+                  :subfield="false"
+                  defaultOpen="preview"
+                  :editable="false"
+                  :imageClick="()=>{}" />
   </div>
 </template>
 <script>
@@ -13,12 +18,6 @@ import { getArticle } from "@/api/article";
 export default {
   async created() {
     await this.getArticle();
-  },
-  mounted() {
-    document.getElementsByClassName("v-note-op")[0].style.display = "none";
-    document.getElementsByClassName("v-note-edit")[0].style.display = "none";
-    document.getElementsByClassName("v-note-show")[0].style.flex = 1;
-    document.getElementsByClassName("v-show-content")[0].style.width = "100%";
   },
   data() {
     return {

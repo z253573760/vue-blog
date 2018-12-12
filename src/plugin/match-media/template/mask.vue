@@ -1,7 +1,9 @@
 <template>
-    <div class="mask" v-if="!isMobile||show"  @touchmove.prevent="()=>{}">
-        <div class="title">{{txt}}</div>
-    </div>
+  <div class="mask"
+       v-if="!isMobile||show"
+       @touchmove.prevent="()=>{}">
+    <div class="title">{{txt}}</div>
+  </div>
 </template>
 <script>
 import { orientate } from "../lib/helper";
@@ -11,11 +13,9 @@ export default {
       show: false
     };
   },
-  methods: {
-    //
-  },
   beforeCreate() {
     orientate(this);
+    !this.isMobile && (document.body.parentNode.style.overflowY = "hidden");
   },
   computed: {
     matches() {
@@ -47,6 +47,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   /* transition: all 0.3s linear; */
 }
 .mask .title {
