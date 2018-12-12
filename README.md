@@ -20,10 +20,8 @@ admin: vue-cli3 vue2.x element-ui
 项目打包:npm run build
 ```
 
-## 客户端效果
+## 效果
 
 ![image](https://github.com/z253573760/vue-blog/blob/master/src/assets/image/blog.gif?raw=true)
-
-## 后台管理
 
 ![image](https://github.com/z253573760/vue-blog/blob/master/src/assets/image/admin.png?raw=true)
