@@ -1,9 +1,9 @@
-# vue-blog
+## vue-blog
 
 前后端分离的个人博客 🛠️  
 在线访问:[移动端](http://119.29.165.40)
 
-# 技术栈
+## 技术栈
 
 ```
 移动端: vue-cli3 vue2.x vant-ui
@@ -11,7 +11,7 @@ admin: vue-cli3 vue2.x element-ui
 服务器: egg sequelize mysql redis nginx
 ```
 
-# 运行
+## 运行
 
 ```
 所需环境 node
@@ -20,10 +20,10 @@ admin: vue-cli3 vue2.x element-ui
 项目打包:npm run build
 ```
 
-# 客户端效果
+## 客户端效果
 
 ![image](https://github.com/z253573760/vue-blog/blob/master/src/assets/image/blog.gif?raw=true)
 
-# 后台管理
+## 后台管理
 
 ![image](https://github.com/z253573760/vue-blog/blob/master/src/assets/image/admin.png?raw=true)
