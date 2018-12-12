@@ -10,15 +10,18 @@ import "@/assets/js/rem.js";
 import "@/utils/fastClick.js";
 import "@/components/global.js";
 import Grid from "vue-js-grid";
-import Loading from "@/plugin/vue-load";
-import MatchMedia from "@/plugin/match-media";
 import * as filters from "./filters";
 import mavonEditor from "mavon-editor";
 import "mavon-editor/dist/css/index.css";
+
+//自己封装的插件
+import Loading from "@/plugin/vue-load";
+import MatchMedia from "@/plugin/match-media";
+import Top from "@/plugin/top";
 Vue.use(mavonEditor);
 Vue.use(Loading);
 Vue.use(MatchMedia);
-
+Vue.use(Top);
 Vue.use(Grid);
 Vue.use(Vant);
 Vue.use(VueParticles);

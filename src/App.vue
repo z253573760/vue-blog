@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <Top/>
     <CountUp v-if="isShowWelcome"
              :end="count" />
     <div class="nav-warpper"
@@ -9,9 +8,8 @@
                   plain
                   @click='CHANGE_MENU'
                   :style="blk"
-                  @dragover="drop" 
-                 v-show="isShowBtn"
-                  >
+                  @dragover="drop"
+                  v-show="isShowBtn">
         <van-icon name="wap-nav" />
       </van-button>
     </div>

@@ -15,6 +15,9 @@ export default {
   },
   beforeCreate() {
     orientate(this);
+    // !this.isMobile && (document.body.parentNode.style.overflowY = "hidden");
+  },
+  created() {
     !this.isMobile && (document.body.parentNode.style.overflowY = "hidden");
   },
   computed: {

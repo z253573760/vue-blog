@@ -50,7 +50,7 @@ module.exports = {
     };
 
     if (process.env.NODE_ENV == "production") {
-      //   config.plugins = [...config.plugins, ...plugins];
+      // config.plugins = [...config.plugins, ...plugins];
     }
   },
   //允许对内部的 webpack 配置进行更细粒度的修改。
@@ -72,6 +72,13 @@ module.exports = {
         return options;
       });
 
+    // config.module
+    //   .rule("babel-loader")
+    //   .test(/\.js$/, )
+    //   .use("babel-loader")
+    //   .loader("babel-loader")
+    //   .tap(opts => opts)
+    //   .end()
 
 
   },
