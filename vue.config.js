@@ -48,15 +48,25 @@ module.exports = {
       vuex: "Vuex",
       Vant: "vant"
     };
+    config.performance = {
+      maxAssetSize: 100000000,
+      maxEntrypointSize: 400000000
+    }
 
     if (process.env.NODE_ENV == "production") {
-      // config.plugins = [...config.plugins, ...plugins];
+      config.plugins = [...config.plugins, ...plugins];
     }
   },
   //允许对内部的 webpack 配置进行更细粒度的修改。
   chainWebpack: config => {
     //命名
-    config.resolve.alias.set("ASSET", resolve("src/assets"));
+    config.resolve.alias
+      .set("SRC", resolve("src"))
+      .set("ASSET", resolve("src/assets"))
+      .set("VIEW", resolve("src/components/page"))
+      .set("COMPONENT", resolve("src/components/common"))
+      .set("UTIL", resolve("src/utils"))
+      .set("SERVICE", resolve("src/services"));
 
     //打包文件带hash
     config.output.filename("[name].[hash].js").end();
@@ -71,15 +81,6 @@ module.exports = {
         options.compilerOptions.preserveWhitespace = true;
         return options;
       });
-
-    // config.module
-    //   .rule("babel-loader")
-    //   .test(/\.js$/, )
-    //   .use("babel-loader")
-    //   .loader("babel-loader")
-    //   .tap(opts => opts)
-    //   .end()
-
 
   },
   devServer: {
