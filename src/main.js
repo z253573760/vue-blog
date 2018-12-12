@@ -14,6 +14,7 @@ import * as filters from "./filters";
 import mavonEditor from "mavon-editor";
 import "mavon-editor/dist/css/index.css";
 
+
 //自己封装的插件
 import Loading from "@/plugin/vue-load";
 import MatchMedia from "@/plugin/match-media";
