@@ -49,12 +49,13 @@ export default {
 .top {
   position: fixed;
   right: 0;
+  font-size: 26px;
   background: rgba($color: #000000, $alpha: 0.7);
   bottom: 10%;
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   text-align: center;
-  line-height: 50px;
+  line-height: 80px;
   border-radius: 10px;
   color: white;
   transition: all 0.3s linear;

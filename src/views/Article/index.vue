@@ -1,13 +1,13 @@
 <template>
-<div class="article">
+  <div class="article">
     <div class="animated pulse">
-    <div class="header">
+      <div class="header">
+      </div>
+      <transition>
+        <router-view :key="$route.fullpath" />
+      </transition>
     </div>
-    <transition>
-      <router-view :key="$route.fullpath" />
-    </transition>
   </div>
-</div>
 </template>
 
 <script>
@@ -26,29 +26,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/mixin.scss";
 .article {
   background: #eeeeee;
   color: black;
   height: 100%;
   position: relative;
   .header {
-    height: px2rem(200px);
+    height: 200px;
     background-size: 100% 100%;
-    font-size: px2rem(80px);
+    font-size: 80px;
     filter: blur(3px);
     background-image: url("../../assets/image/Article-herader.jpg");
   }
   &::before {
     content: "Blog";
     width: 100%;
-    height: px2rem(200px);
+    height: 200px;
     text-align: center;
-    line-height: px2rem(200px);
+    line-height: 200px;
     font-weight: bold;
     color: white;
-    font-size: px2rem(80px);
-    letter-spacing: px2rem(3px);
+    font-size: 80px;
+    letter-spacing: 3px;
     position: absolute;
     z-index: 99;
   }

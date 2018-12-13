@@ -47,7 +47,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/mixin.scss";
 .test {
   h2 {
     // text-align: center;

@@ -57,7 +57,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/mixin.scss";
+// @import "@/assets/css/mixin.scss";
 
 .skill {
   background: #eeeeee;
@@ -68,33 +68,33 @@ export default {
     width: 100%;
     text-align: center;
     content: "Skill";
-    height: px2rem(200px);
-    line-height: px2rem(200px);
+    height: 200px;
+    line-height: 200px;
     font-weight: bold;
     color: white;
-    font-size: px2rem(80px);
-    letter-spacing: px2rem(3px);
+    font-size: 80px;
+    letter-spacing: 3px;
     position: absolute;
     z-index: 1;
   }
   .header {
-    height: px2rem(200px);
+    height: 200px;
     background-size: 100% 100%;
-    font-size: px2rem(80px);
+    font-size: 80px;
     filter: blur(2px);
     background-image: url("../../assets/image/Skill-header.jpg");
   }
   p {
-    padding-top: px2rem(50px);
+    padding-top: 50px;
     text-align: center;
-    height: px2rem(100px);
-    line-height: px2rem(100px);
+    height: 100px;
+    line-height: 100px;
   }
   .btn {
     text-align: center;
-    width: px2rem(120px);
-    height: px2rem(80px);
-    padding: px2rem(1px);
+    width: 120px;
+    height: 80px;
+    padding: 1px;
     box-shadow: -1px 2px 5px rgba(67, 67, 68, 0.5);
   }
 }

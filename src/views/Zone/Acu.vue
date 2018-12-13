@@ -59,26 +59,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/mixin.scss";
-.top {
-  position: fixed;
-  right: 0;
-  background: rgba($color: #000000, $alpha: 0.7);
-  bottom: 10%;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  border-radius: 10px;
-  color: white;
-  transition: all 0.3s linear;
-  transform: translate(0, -50%);
-  font-weight: bold;
-}
-.top-hide {
-  right: -80px;
-}
-
 .aj {
   background: white;
   height: 80%;
@@ -86,11 +66,11 @@ export default {
   color: black;
   padding: px2rem(3px);
   img {
-    margin: px2rem(3px);
-    width: px2rem(190px);
-    height: px2rem(190px);
+    margin: 3px;
+    width: 190px;
+    height: 190px;
     overflow: hidden;
-    border-radius: px2rem(10px);
+    border-radius: 10px;
   }
 }
 </style>

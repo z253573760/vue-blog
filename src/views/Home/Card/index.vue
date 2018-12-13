@@ -19,27 +19,27 @@
   </div>
 </template>
 <style lang="scss" scoped>
-@import "@/assets/css/mixin.scss";
 .warpper {
-  padding: px2rem(20px);
-  padding-top: px2rem(60px);
+  padding: 20px;
+  padding-top: 120px;
   font-weight: bold;
   color: #e8e8e8;
   height: 100vh;
   z-index: 99;
+  // background: red;
   .holiday-warpper {
-    padding-top: px2rem(20px);
+    padding-top: 20px;
     .item {
-      padding: px2rem(20px);
-      font-size: px2rem(22px);
+      padding: 20px;
+      font-size: 22px;
       background: rgba(136, 134, 134, 0.3);
-      border-radius: px2rem(20px);
+      border-radius: 20px;
       box-shadow: 2px 2px 5px #333333;
-      margin-bottom: px2rem(20px);
+      margin-bottom: 20px;
     }
   }
   .calendar-warpper {
-    padding-top: px2rem(15px);
+    padding-top: 15px;
   }
 }
 </style>

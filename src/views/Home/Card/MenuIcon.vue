@@ -1,20 +1,22 @@
 <template>
-    <div class="menu-icon-wapper">
-     <grid :draggable="true"
-            :sortable="true"
-            :items="menuList"
-            :center="true">
-        <template slot="cell"
-                  scope="props">
-            <div class="item" @click="linkTo(props.item)">
-                <div class="icon-warpper">
-                    <img class="icon" :src="props.item.meta.icon"/>
-                </div>
-                <div class="title">{{props.item.meta.title}}</div>
-            </div>
-        </template>
-      </grid>
-    </div>
+  <div class="menu-icon-wapper">
+    <grid :draggable="true"
+          :sortable="true"
+          :items="menuList"
+          :center="true">
+      <template slot="cell"
+                scope="props">
+        <div class="item"
+             @click="linkTo(props.item)">
+          <div class="icon-warpper">
+            <img class="icon"
+                 :src="props.item.meta.icon" />
+          </div>
+          <div class="title">{{props.item.meta.title}}</div>
+        </div>
+      </template>
+    </grid>
+  </div>
 </template>
 <script>
 import routes from "@/router/routes";
@@ -40,23 +42,23 @@ export default {
   bottom: 10%;
   .item {
     position: relative;
-    width: px2rem(100px) !important;
-    height: px2rem(100px) !important;
+    width: 100px;
+    height: 100px;
     .icon-warpper {
       position: relative;
       left: 50%;
       transform: translateX(-50%);
-      width: px2rem(90px) !important;
-      height: px2rem(90px) !important;
+      width: 90px;
+      height: 90px;
       background: rgba(255, 255, 255, 0.8);
-      border-radius: px2rem(20px);
+      border-radius: 20px;
       .icon {
         position: relative;
         top: 50%;
         transform: translateY(-50%);
         text-align: center;
-        width: px2rem(50px) !important;
-        height: px2rem(50px) !important;
+        width: 50px;
+        height: 50px;
       }
     }
   }

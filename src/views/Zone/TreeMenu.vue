@@ -2,8 +2,10 @@
   <div>
 
     <div class="warpper">
-      <div v-for="(item,index) in list" :key="index">
-        <p class="title" @click="toggle(index)">
+      <div v-for="(item,index) in list"
+           :key="index">
+        <p class="title"
+           @click="toggle(index)">
           <span v-if="item.children">
             <span v-if="statusArr[index]">-</span>
             <span v-else>+</span>
@@ -13,7 +15,8 @@
         </p>
         <div class="tree-warpper">
           <transition name="slide-fade">
-            <tree-menu v-if="item.children&&statusArr[index]" :list="item.children">
+            <tree-menu v-if="item.children&&statusArr[index]"
+                       :list="item.children">
             </tree-menu>
           </transition>
         </div>
@@ -22,21 +25,20 @@
   </div>
 </template>
 <style lang="scss" scoped>
-@import "@/assets/css/mixin.scss";
 .title {
-  width: px2rem(150px);
-  height: px2rem(80px);
-  line-height: px2rem(80px);
+  width: 150px;
+  height: 80px;
+  line-height: 80px;
   background: #3a3a3a;
   text-align: center;
-  border: px2rem(1px) solid #e8e8ee;
+  border: 1px solid #e8e8ee;
   cursor: pointer;
-  border-radius: px2rem(3px);
+  border-radius: 3px;
   font-weight: bold;
   color: white;
 }
 .tree-warpper {
-  margin-left: px2rem(20px);
+  margin-left: 20px;
 }
 /* 可以设置不同的进入和离开动画 */
 /* 设置持续时间和动画函数 */
@@ -46,7 +48,7 @@
 }
 .slide-fade-enter,
 .slide-fade-leave-to {
-  transform: translateX(px2rem(-20px)) translateY(px2rem(-50px));
+  transform: translateX(-20px) translateY(-50px);
 }
 .slide-fade-move {
   transition: all 1s ease;

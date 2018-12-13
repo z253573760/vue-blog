@@ -11,43 +11,42 @@
   </div>
 </template>
 <style lang="scss" scoped>
-@import "@/assets/css/mixin.scss";
 .warpper-date {
   position: relative;
   color: black;
   display: inline-block;
-  width: px2rem(170px);
-  height: px2rem(170px);
+  width: 170px;
+  height: 170px;
   background: rgba(255, 255, 255, 0.6);
-  border-radius: px2rem(30px);
+  border-radius: 30px;
   .box {
     display: inline-block;
     position: absolute;
-    width: px2rem(10px);
-    height: px2rem(20px);
+    width: 10px;
+    height: 20px;
     background: #e8e8e8;
-    border-radius: px2rem(5px);
-    top: px2rem(-10px);
+    border-radius: 5px;
+    top: -10px;
   }
   .left {
-    left: px2rem(40px);
+    left: 40px;
   }
   .right {
-    right: px2rem(40px);
+    right: 40px;
   }
   .weekday {
-    font-size: px2rem(24px);
+    font-size: 24px;
     color: white;
     background: rgba(113, 195, 250, 0.6);
-    height: px2rem(45px);
-    line-height: px2rem(45px);
-    border-top-left-radius: px2rem(30px);
-    border-top-right-radius: px2rem(30px);
+    height: 45px;
+    line-height: 45px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
   }
   .date {
-    font-size: px2rem(80px);
-    line-height: px2rem(120px);
-    border-radius: px2rem(30px);
+    font-size: 80px;
+    line-height: 120px;
+    border-radius: 30px;
   }
 }
 </style>

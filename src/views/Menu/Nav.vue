@@ -1,16 +1,14 @@
 <template>
-	<div class="nav" >
-    <van-button 
-      type="default"
-      @click ='linkto(item.path,key)' 
-      class="btn animated" 
-      v-for="(item,key) in menuList" 
-      :key="key"
-      ref="btn"
-      >
+  <div class="nav">
+    <van-button type="default"
+                @click='linkto(item.path,key)'
+                class="btn animated"
+                v-for="(item,key) in menuList"
+                :key="key"
+                ref="btn">
       {{item.meta.title}}
     </van-button>
-	</div>
+  </div>
 </template>
 
 <script>
@@ -35,17 +33,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/mixin.scss";
 .nav {
   display: flex;
   flex-direction: column;
-  height: px2rem(360px);
+  height: 360px;
   justify-content: space-around;
   font-weight: bold;
   user-select: none;
   .btn {
     cursor: point;
-    font-size: px2rem(22px);
+    font-size: 22px;
     &:active {
       transform: scale(1.3);
       font-weight: bold;

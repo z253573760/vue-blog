@@ -16,7 +16,7 @@ module.exports = {
   css: {
     loaderOptions: {
       less: {
-        javascriptEnabled: truecnpm
+        javascriptEnabled: true
       }
     }
   },

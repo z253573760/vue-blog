@@ -52,12 +52,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "@/assets/css/mixin.scss";
 .content {
   background: white;
   padding: 15px;
   .title {
-    font-size: px2rem(26px);
+    font-size: 26px;
     text-align: center;
     margin-bottom: 15px;
   }
