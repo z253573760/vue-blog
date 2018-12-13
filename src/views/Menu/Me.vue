@@ -13,7 +13,6 @@
 <script>
 import { mapState, mapMutations } from "vuex";
 export default {
-  name: "me",
   computed: {
     ...mapMutations(["CHANGE_MENU"]),
     ...mapState(["menuShow"])

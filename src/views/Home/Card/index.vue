@@ -20,8 +20,8 @@
 </template>
 <style lang="scss" scoped>
 .warpper {
-  padding: 20px;
-  padding-top: 120px;
+  padding: 15px;
+  padding-top: 80px;
   font-weight: bold;
   color: #e8e8e8;
   height: 100vh;

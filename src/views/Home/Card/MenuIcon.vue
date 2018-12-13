@@ -40,6 +40,7 @@ export default {
 .menu-icon-wapper {
   position: fixed;
   bottom: 10%;
+  font-size: 20px;
   .item {
     position: relative;
     width: 100px;
