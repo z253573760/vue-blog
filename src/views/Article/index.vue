@@ -36,7 +36,7 @@ export default {
     background-size: 100% 100%;
     font-size: 80px;
     filter: blur(3px);
-    background-image: url("../../assets/image/Article-herader.jpg");
+    background-image: url("http://pji0d7zo8.bkt.clouddn.com/Article-herader.jpg");
   }
   &::before {
     content: "Blog";
