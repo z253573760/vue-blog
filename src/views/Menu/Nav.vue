@@ -49,7 +49,7 @@ export default {
     cursor: point;
     font-size: 22px;
     &:active {
-      transform: scale(1.3);
+      // transform: scale(1.3);
       font-weight: bold;
       transition: all 0.3s ease;
     }
