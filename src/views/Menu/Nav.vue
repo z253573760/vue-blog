@@ -6,7 +6,10 @@
                 v-for="(item,key) in menuList"
                 :key="key"
                 ref="btn">
-      {{item.meta.title}}
+      <div class="item">
+        <span>{{item.meta.title}}</span>
+        <img :src="item.meta.icon">
+      </div>
     </van-button>
   </div>
 </template>
@@ -26,6 +29,7 @@ export default {
     menuList() {
       const { path } = this.$route;
       const menuList = routes.filter(item => item.meta && item.path !== path);
+      console.log(menuList);
       return menuList;
     }
   }
@@ -40,6 +44,7 @@ export default {
   justify-content: space-around;
   font-weight: bold;
   user-select: none;
+
   .btn {
     cursor: point;
     font-size: 22px;
@@ -47,6 +52,16 @@ export default {
       transform: scale(1.3);
       font-weight: bold;
       transition: all 0.3s ease;
+    }
+    .item {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 45px;
+        height: 45px;
+      }
     }
   }
 }

@@ -14,7 +14,7 @@
       </van-button>
     </div>
     <van-popup v-model="isShow"
-               position="top"
+               position="right"
                @click-overlay="CHANGE_MENU">
       <Menu />
     </van-popup>
