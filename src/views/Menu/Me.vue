@@ -31,7 +31,7 @@ export default {
 .me {
   width: 100%;
   height: 320px;
-  background: url("http://pji0d7zo8.bkt.clouddn.com/default-banner-dark%20%281%29.jpg");
+  background: url("http://qn.ztsky.cn/default-banner-dark%20%281%29.jpg");
   background-size: 100% 100%;
   text-align: left;
   padding: 20px;

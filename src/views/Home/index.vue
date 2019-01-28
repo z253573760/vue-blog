@@ -34,7 +34,7 @@ export default {
   height: 100%;
   background-size: 100% 100%;
   text-align: center;
-  background-image: url("http://pji0d7zo8.bkt.clouddn.com/bg.png");
+  background-image: url("http://qn.ztsky.cn/bg.png");
   .text {
     font-size: $fontSize;
   }

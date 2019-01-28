@@ -36,6 +36,7 @@
   border-radius: 3px;
   font-weight: bold;
   color: white;
+  font-size: 22px;
 }
 .tree-warpper {
   margin-left: 20px;

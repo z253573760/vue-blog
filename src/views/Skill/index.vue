@@ -82,7 +82,7 @@ export default {
     background-size: 100% 100%;
     font-size: 80px;
     filter: blur(2px);
-    background-image: url("http://pji0d7zo8.bkt.clouddn.com/default-banner-dark%20%281%29.jpg");
+    background-image: url("http://qn.ztsky.cn/default-banner-dark%20%281%29.jpg");
   }
   p {
     padding-top: 50px;
