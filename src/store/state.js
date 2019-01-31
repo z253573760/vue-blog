@@ -7,6 +7,13 @@ const state = {
   ip: {
     city: "厦门",
     region: "福建"
+  },
+  user: {
+    address: "",
+    avatar: "",
+    nick_name: "",
+    remark: "",
+    job: ""
   }
 };
 

@@ -52,7 +52,7 @@ module.exports = {
     config.performance = {
       maxAssetSize: 100000000,
       maxEntrypointSize: 400000000
-    }
+    };
 
     if (process.env.NODE_ENV == "production") {
       config.plugins = [...config.plugins, ...plugins];
@@ -82,7 +82,6 @@ module.exports = {
         options.compilerOptions.preserveWhitespace = true;
         return options;
       });
-
   },
   devServer: {
     //跨域

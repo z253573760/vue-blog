@@ -11,6 +11,9 @@ const mutations = {
     state.isNew = data.isNew;
     state.ip = data;
   },
+  saveUser(state, data) {
+    state.user = data;
+  },
   changeNavShow(state, data) {
     state.navShow = data;
   }

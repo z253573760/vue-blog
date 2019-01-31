@@ -4,10 +4,11 @@
       <img @click="linkTo"
            v-if="menuShow"
            class="headimgurl"
-           src="@/assets/image/touxiang.jpg">
+           :src="user.avatar">
     </transition>
-    <div>灿灿</div>
-    <div>福建厦门</div>
+
+    <div>{{user.nick_name}}</div>
+    <div>{{user.address}}</div>
   </div>
 </template>
 
@@ -16,7 +17,7 @@ import { mapState, mapMutations } from "vuex";
 export default {
   computed: {
     ...mapMutations(["CHANGE_MENU"]),
-    ...mapState(["menuShow"])
+    ...mapState(["menuShow", "user"])
   },
   methods: {
     linkTo() {

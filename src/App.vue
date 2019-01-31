@@ -42,6 +42,7 @@ export default {
     this.$loading.show();
     this.isShowWelcome && this.saveLastTime();
     await this.getIp();
+    await this.getUser();
     this.$loading.hide();
   },
   data() {
@@ -68,7 +69,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(["getIp"]),
+    ...mapActions(["getIp", "getUser"]),
     ...mapMutations(["CHANGE_MENU"]),
     saveLastTime() {
       window.localStorage.lastTime = new Date().getTime();
