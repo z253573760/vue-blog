@@ -4,12 +4,12 @@
 在线访问:
 [移动端](http://cc.ztsky.cn)
 [PC 端](http://cc.ztsky.cn:8011)
-[admin](http://cc.ztsky.cn:8010)
 
 ## 技术栈
 
 ```
 移动端: vue-cli3 vue2.x vant-ui
+PC 端  umi react antd-ui
 admin: vue-cli3 vue2.x element-ui
 服务器: egg sequelize mysql redis nginx
 ```
