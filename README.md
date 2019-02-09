@@ -1,7 +1,10 @@
 ## vue-blog
 
 前后端分离的个人博客 🛠️  
-在线访问:[移动端](http://cc.ztsky.com) [PC 端](http://cc.ztsky.com:8011) [admin](http://cc.ztsky.com:8010)
+在线访问:
+[移动端](http://cc.ztsky.cn)
+[PC 端](http://cc.ztsky.cn:8011)
+[admin](http://cc.ztsky.cn:8010)
 
 ## 技术栈
 
