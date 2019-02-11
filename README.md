@@ -1,5 +1,6 @@
 ## vue-blog
 
+![image](https://github.com/z253573760/vue-blog/blob/master/src/assets/image/github.jpg?raw=true)
 前后端分离的个人博客 🛠️  
 在线访问:
 [移动端](http://cc.ztsky.cn)
